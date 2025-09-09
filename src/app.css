@@ -8,106 +8,191 @@ html {
 }
 
 /*
-  Catppuccin color scheme
-  - Defaults to Latte (light)
-  - Uses Mocha for dark via prefers-color-scheme
-  - Maps common Tailwind utility colors used in the app to Catppuccin tokens
+  Theming via CSS variables
+  - Themes applied by setting `data-theme` on <html>
+  - Generic variables drive component styles and Tailwind overrides
 */
 
-:root {
-	/* Latte (light) */
-	--ctp-rosewater: #dc8a78;
-	--ctp-flamingo: #dd7878;
-	--ctp-pink: #ea76cb;
-	--ctp-mauve: #8839ef;
-	--ctp-red: #d20f39;
-	--ctp-maroon: #e64553;
-	--ctp-peach: #fe640b;
-	--ctp-yellow: #df8e1d;
-	--ctp-green: #40a02b;
-	--ctp-teal: #179299;
-	--ctp-sky: #04a5e5;
-	--ctp-sapphire: #209fb5;
-	--ctp-blue: #1e66f5;
-	--ctp-lavender: #7287fd;
-	--ctp-text: #4c4f69;
-	--ctp-subtext1: #5c5f77;
-	--ctp-subtext0: #6c6f85;
-	--ctp-overlay2: #7c7f93;
-	--ctp-overlay1: #8c8fa1;
-	--ctp-overlay0: #9ca0b0;
-	--ctp-surface2: #acb0be;
-	--ctp-surface1: #bcc0cc;
-	--ctp-surface0: #ccd0da;
-	--ctp-base: #eff1f5;
-	--ctp-mantle: #e6e9ef;
-	--ctp-crust: #dce0e8;
-
-	/* App accents */
-	--accent: var(--ctp-blue);
-	--accent-hover: #1a56d6; /* darker blue for hover */
+/* Default theme if none set: Catppuccin Latte */
+:root,
+html[data-theme='catppuccin-latte'] {
+	--c-base: #eff1f5;
+	--c-surface: #e6e9ef;
+	--c-text: #4c4f69;
+	--c-subtext1: #5c5f77;
+	--c-subtext0: #6c6f85;
+	--c-accent: #1e66f5;
+	--c-accent-hover: #1a56d6;
+	/* hues */
+	--c-blue: #1e66f5;
+	--c-green: #40a02b;
+	--c-yellow: #df8e1d;
+	--c-orange: #fe640b;
+	--c-red: #d20f39;
+	--c-purple: #8839ef;
+	--c-indigo: #7287fd;
+	--c-cyan: #04a5e5;
+	--c-teal: #179299;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		/* Mocha (dark) */
-		--ctp-rosewater: #f5e0dc;
-		--ctp-flamingo: #f2cdcd;
-		--ctp-pink: #f5c2e7;
-		--ctp-mauve: #cba6f7;
-		--ctp-red: #f38ba8;
-		--ctp-maroon: #eba0ac;
-		--ctp-peach: #fab387;
-		--ctp-yellow: #f9e2af;
-		--ctp-green: #a6e3a1;
-		--ctp-teal: #94e2d5;
-		--ctp-sky: #89dceb;
-		--ctp-sapphire: #74c7ec;
-		--ctp-blue: #89b4fa;
-		--ctp-lavender: #b4befe;
-		--ctp-text: #cdd6f4;
-		--ctp-subtext1: #bac2de;
-		--ctp-subtext0: #a6adc8;
-		--ctp-overlay2: #9399b2;
-		--ctp-overlay1: #7f849c;
-		--ctp-overlay0: #6c7086;
-		--ctp-surface2: #585b70;
-		--ctp-surface1: #45475a;
-		--ctp-surface0: #313244;
-		--ctp-base: #1e1e2e;
-		--ctp-mantle: #181825;
-		--ctp-crust: #11111b;
+/* Catppuccin Mocha */
+html[data-theme='catppuccin-mocha'] {
+	--c-base: #1e1e2e;
+	--c-surface: #313244;
+	--c-text: #cdd6f4;
+	--c-subtext1: #bac2de;
+	--c-subtext0: #a6adc8;
+	--c-accent: #89b4fa;
+	--c-accent-hover: #b4befe;
+	/* hues */
+	--c-blue: #89b4fa;
+	--c-green: #a6e3a1;
+	--c-yellow: #f9e2af;
+	--c-orange: #fab387;
+	--c-red: #f38ba8;
+	--c-purple: #cba6f7;
+	--c-indigo: #b4befe;
+	--c-cyan: #74c7ec;
+	--c-teal: #94e2d5;
+}
 
-		/* App accents */
-		--accent: var(--ctp-blue);
-		--accent-hover: var(--ctp-lavender);
+/* Gruvbox Light */
+html[data-theme='gruvbox-light'] {
+	--c-base: #fbf1c7;
+	--c-surface: #ebdbb2;
+	--c-text: #3c3836;
+	--c-subtext1: #504945;
+	--c-subtext0: #665c54;
+	--c-accent: #458588;
+	--c-accent-hover: #076678;
+	/* hues */
+	--c-blue: #458588;
+	--c-green: #98971a;
+	--c-yellow: #d79921;
+	--c-orange: #d65d0e;
+	--c-red: #cc241d;
+	--c-purple: #b16286;
+	--c-indigo: #5f81a5;
+	--c-cyan: #83a598;
+	--c-teal: #8ec07c;
+}
+
+/* Gruvbox Dark */
+html[data-theme='gruvbox-dark'] {
+	--c-base: #282828;
+	--c-surface: #3c3836;
+	--c-text: #ebdbb2;
+	--c-subtext1: #d5c4a1;
+	--c-subtext0: #bdae93;
+	--c-accent: #83a598;
+	--c-accent-hover: #689d6a;
+	/* hues */
+	--c-blue: #83a598;
+	--c-green: #b8bb26;
+	--c-yellow: #fabd2f;
+	--c-orange: #fe8019;
+	--c-red: #fb4934;
+	--c-purple: #d3869b;
+	--c-indigo: #83a598;
+	--c-cyan: #83a598;
+	--c-teal: #8ec07c;
+}
+
+/* Kanagawa (dark) */
+html[data-theme='kanagawa'] {
+	--c-base: #1f1f28;
+	--c-surface: #2a2a37;
+	--c-text: #dcd7ba;
+	--c-subtext1: #c8c093;
+	--c-subtext0: #a6a69c;
+	--c-accent: #7e9cd8;
+	--c-accent-hover: #9ab8e2;
+	/* hues */
+	--c-blue: #7e9cd8;
+	--c-green: #98bb6c;
+	--c-yellow: #e6c384;
+	--c-orange: #ffa066;
+	--c-red: #e46876;
+	--c-purple: #957fb8;
+	--c-indigo: #7aa2f7;
+	--c-cyan: #7fb4ca;
+	--c-teal: #7aa89f;
+}
+
+/* Respect system preference on first load if no theme saved */
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme]) {
+		--c-base: #1e1e2e;
+		--c-surface: #313244;
+		--c-text: #cdd6f4;
+		--c-subtext1: #bac2de;
+		--c-subtext0: #a6adc8;
+		--c-accent: #89b4fa;
+		--c-accent-hover: #b4befe;
 	}
 }
 
 /* Base theming */
 body {
-	background-color: var(--ctp-base);
-	color: var(--ctp-text);
+	background-color: var(--c-base);
+	color: var(--c-text);
 }
 
-/* Map common Tailwind utilities used in the project to Catppuccin */
+/* Tailwind utility remaps to theme variables */
 /* Backgrounds */
-.bg-gray-50 { background-color: var(--ctp-base) !important; }
-.bg-white { background-color: var(--ctp-mantle) !important; }
-.bg-blue-600 { background-color: var(--accent) !important; }
-.hover\:bg-blue-700:hover { background-color: var(--accent-hover) !important; }
-.bg-blue-50 { background-color: color-mix(in srgb, var(--accent) 12%, transparent) !important; }
-.hover\:bg-blue-50:hover { background-color: color-mix(in srgb, var(--accent) 20%, transparent) !important; }
+.bg-gray-50 { background-color: var(--c-base) !important; }
+.bg-white { background-color: var(--c-surface) !important; }
+.bg-blue-600 { background-color: var(--c-accent) !important; }
+.hover\:bg-blue-700:hover { background-color: var(--c-accent-hover) !important; }
+.bg-blue-50 { background-color: color-mix(in srgb, var(--c-accent) 12%, transparent) !important; }
+.hover\:bg-blue-50:hover { background-color: color-mix(in srgb, var(--c-accent) 20%, transparent) !important; }
+
+/* Neutral grays */
+.bg-gray-100 { background-color: color-mix(in srgb, var(--c-text) 8%, var(--c-base)) !important; }
+.bg-gray-200 { background-color: color-mix(in srgb, var(--c-text) 14%, var(--c-base)) !important; }
+.bg-gray-700 { background-color: color-mix(in srgb, var(--c-text) 65%, var(--c-base)) !important; }
+.hover\:bg-gray-800:hover { background-color: color-mix(in srgb, var(--c-text) 75%, var(--c-base)) !important; }
+
+/* Themed hue backgrounds (100/200) */
+.bg-orange-100 { background-color: color-mix(in srgb, var(--c-orange) 15%, var(--c-base)) !important; }
+.hover\:bg-orange-200:hover { background-color: color-mix(in srgb, var(--c-orange) 25%, var(--c-base)) !important; }
+.bg-blue-100 { background-color: color-mix(in srgb, var(--c-blue) 15%, var(--c-base)) !important; }
+.hover\:bg-blue-200:hover { background-color: color-mix(in srgb, var(--c-blue) 25%, var(--c-base)) !important; }
+.bg-yellow-100 { background-color: color-mix(in srgb, var(--c-yellow) 18%, var(--c-base)) !important; }
+.hover\:bg-yellow-200:hover { background-color: color-mix(in srgb, var(--c-yellow) 28%, var(--c-base)) !important; }
+.bg-cyan-100 { background-color: color-mix(in srgb, var(--c-cyan) 15%, var(--c-base)) !important; }
+.hover\:bg-cyan-200:hover { background-color: color-mix(in srgb, var(--c-cyan) 25%, var(--c-base)) !important; }
+.bg-green-100 { background-color: color-mix(in srgb, var(--c-green) 15%, var(--c-base)) !important; }
+.hover\:bg-green-200:hover { background-color: color-mix(in srgb, var(--c-green) 25%, var(--c-base)) !important; }
+.bg-red-100 { background-color: color-mix(in srgb, var(--c-red) 15%, var(--c-base)) !important; }
+.hover\:bg-red-200:hover { background-color: color-mix(in srgb, var(--c-red) 25%, var(--c-base)) !important; }
+.bg-purple-100 { background-color: color-mix(in srgb, var(--c-purple) 15%, var(--c-base)) !important; }
+.hover\:bg-purple-200:hover { background-color: color-mix(in srgb, var(--c-purple) 25%, var(--c-base)) !important; }
+.bg-teal-100 { background-color: color-mix(in srgb, var(--c-teal) 15%, var(--c-base)) !important; }
+.hover\:bg-teal-200:hover { background-color: color-mix(in srgb, var(--c-teal) 25%, var(--c-base)) !important; }
+.bg-indigo-100 { background-color: color-mix(in srgb, var(--c-indigo) 15%, var(--c-base)) !important; }
+.hover\:bg-indigo-200:hover { background-color: color-mix(in srgb, var(--c-indigo) 25%, var(--c-base)) !important; }
 
 /* Borders */
-.border-blue-600 { border-color: var(--accent) !important; }
+.border-blue-600 { border-color: var(--c-accent) !important; }
 
 /* Text colors */
-.text-gray-900 { color: var(--ctp-text) !important; }
-.text-gray-700 { color: var(--ctp-subtext1) !important; }
-.text-gray-600 { color: var(--ctp-subtext0) !important; }
-.text-blue-600 { color: var(--accent) !important; }
-.hover\:text-blue-600:hover { color: var(--accent) !important; }
+.text-gray-900 { color: var(--c-text) !important; }
+.text-gray-800 { color: color-mix(in srgb, var(--c-text) 90%, var(--c-base)) !important; }
+.text-gray-700 { color: var(--c-subtext1) !important; }
+.text-gray-600 { color: var(--c-subtext0) !important; }
+.text-gray-200 { color: color-mix(in srgb, var(--c-text) 20%, var(--c-base)) !important; }
+.text-gray-100 { color: color-mix(in srgb, var(--c-text) 12%, var(--c-base)) !important; }
+.text-blue-600 { color: var(--c-accent) !important; }
+.text-blue-700 { color: var(--c-blue) !important; }
+.text-blue-800 { color: var(--c-blue) !important; }
+.hover\:text-blue-600:hover { color: var(--c-accent) !important; }
 
-/* Subtle surfaces for cards */
-.shadow-md, .shadow-sm { background-color: var(--ctp-mantle); }
+.text-orange-600, .text-orange-700, .text-orange-800 { color: var(--c-orange) !important; }
+.text-yellow-600, .text-yellow-700, .text-yellow-800 { color: var(--c-yellow) !important; }
+.text-cyan-600, .text-cyan-700, .text-cyan-800 { color: var(--c-cyan) !important; }
+.text-green-600, .text-green-700, .text-green-800 { color: var(--c-green) !important; }
+.text-red-600, .text-red-700, .text-red-800 { color: var(--c-red) !important; }
+.text-purple-600, .text-purple-700, .text-purple-800 { color: var(--c-purple) !important; }
+.text-teal-600, .text-teal-700, .text-teal-800 { color: var(--c-teal) !important; }
+.text-indigo-600, .text-indigo-700, .text-indigo-800 { color: var(--c-indigo) !important; }

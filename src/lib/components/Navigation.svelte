@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 
 	$: currentPath = $page.url.pathname;
 </script>
@@ -42,6 +43,11 @@
 				>
 					Contacto
 				</a>
+			</div>
+
+			<!-- Theme Toggle (Right) -->
+			<div class="absolute right-0">
+				<ThemeToggle />
 			</div>
 		</div>
 	</div>

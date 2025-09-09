@@ -3,6 +3,16 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			// Early theme boot: apply saved theme before app mounts to avoid FOUC
+			try {
+				const key = 'theme';
+				const saved = localStorage.getItem(key);
+				const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+				const fallback = prefersDark ? 'catppuccin-mocha' : 'catppuccin-latte';
+				document.documentElement.setAttribute('data-theme', saved || fallback);
+			} catch {}
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
