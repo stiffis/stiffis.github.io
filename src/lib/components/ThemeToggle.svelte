@@ -30,7 +30,7 @@
     title={`Tema: ${labelOf(current)}`}
     aria-haspopup="menu"
     aria-expanded={open}
-    class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-blue-600 text-blue-600 hover:bg-blue-50 transition-colors"
+    class="inline-flex items-center gap-2 btn-terminal"
     on:click={() => (open = !open)}
     on:blur={onBlur}
   >
@@ -47,7 +47,7 @@
   {#if open}
     <div
       role="menu"
-      class="absolute right-0 mt-2 w-56 bg-white border border-blue-600/40 rounded-md shadow-sm z-50"
+      class="absolute right-0 mt-2 w-56 panel z-50"
       data-theme-menu
     >
       {#each themes as t}

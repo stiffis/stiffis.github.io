@@ -5,16 +5,16 @@
 	$: currentPath = $page.url.pathname;
 </script>
 
-<nav class="bg-white shadow-sm border-b">
+<nav class="bg-white shadow-sm border-b nav-terminal">
 	<div class="max-w-6xl mx-auto px-4">
 		<div class="flex items-center py-4 relative">
 			<!-- Logo/Brand -->
 			<a
 				href="/"
-				class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors absolute left-0"
+				class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors absolute left-0 cursor-blink"
 				class:text-blue-600={currentPath === '/'}
 			>
-				Caffeine Overflow
+				<span class="prompt">❯</span>Caffeine Overflow
 			</a>
 			
 			<!-- Navigation Links (Centered) -->
