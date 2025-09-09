@@ -133,26 +133,56 @@
 	<section class="mb-12">
 		<h2 class="text-2xl font-bold text-gray-900 mb-6">Herramientas y Utilidades</h2>
 		<div class="grid grid-cols-4 gap-4">
-			<!-- Rectángulo 1 -->
-			<div class="bg-gray-200 rounded-lg aspect-[3/4] hover:bg-gray-300 transition-colors cursor-pointer"></div>
-			<!-- Rectángulo 2 -->
-			<div class="bg-gray-200 rounded-lg aspect-[3/4] hover:bg-gray-300 transition-colors cursor-pointer"></div>
-			<!-- Rectángulo 3 -->
-			<div class="bg-gray-200 rounded-lg aspect-[3/4] hover:bg-gray-300 transition-colors cursor-pointer"></div>
-			<!-- Rectángulo 4 -->
-			<div class="bg-gray-200 rounded-lg aspect-[3/4] hover:bg-gray-300 transition-colors cursor-pointer"></div>
-			<!-- Rectángulo 5 -->
-			<div class="bg-gray-200 rounded-lg aspect-[3/4] hover:bg-gray-300 transition-colors cursor-pointer"></div>
-			<!-- Rectángulo 6 -->
-			<div class="bg-gray-200 rounded-lg aspect-[3/4] hover:bg-gray-300 transition-colors cursor-pointer"></div>
-			<!-- Rectángulo 7 -->
-			<div class="bg-gray-200 rounded-lg aspect-[3/4] hover:bg-gray-300 transition-colors cursor-pointer"></div>
-			<!-- Rectángulo 8 -->
-			<div class="bg-gray-200 rounded-lg aspect-[3/4] hover:bg-gray-300 transition-colors cursor-pointer"></div>
-			<!-- Rectángulo 9 -->
-			<div class="bg-gray-200 rounded-lg aspect-[3/4] hover:bg-gray-300 transition-colors cursor-pointer"></div>
-			<!-- Rectángulo 10 -->
-			<div class="bg-gray-200 rounded-lg aspect-[3/4] hover:bg-gray-300 transition-colors cursor-pointer"></div>
+			<!-- Git -->
+			<div class="bg-red-100 rounded-lg aspect-[3/4] hover:bg-red-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+				<Fa icon={faGit} class="text-red-600 text-4xl mb-2" />
+				<span class="text-sm font-semibold text-red-800">Git</span>
+			</div>
+			<!-- GitHub -->
+			<div class="bg-gray-100 rounded-lg aspect-[3/4] hover:bg-gray-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+				<Fa icon={faGithub} class="text-gray-800 text-4xl mb-2" />
+				<span class="text-sm font-semibold text-gray-900">GitHub</span>
+			</div>
+			<!-- Docker -->
+			<div class="bg-blue-100 rounded-lg aspect-[3/4] hover:bg-blue-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+				<Fa icon={faDocker} class="text-blue-600 text-4xl mb-2" />
+				<span class="text-sm font-semibold text-blue-800">Docker</span>
+			</div>
+			<!-- NPM -->
+			<div class="bg-red-100 rounded-lg aspect-[3/4] hover:bg-red-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+				<Fa icon={faNpm} class="text-red-700 text-4xl mb-2" />
+				<span class="text-sm font-semibold text-red-800">NPM</span>
+			</div>
+			<!-- Java -->
+			<div class="bg-orange-100 rounded-lg aspect-[3/4] hover:bg-orange-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+				<Fa icon={faJava} class="text-orange-600 text-4xl mb-2" />
+				<span class="text-sm font-semibold text-orange-800">Java</span>
+			</div>
+			<!-- PHP -->
+			<div class="bg-indigo-100 rounded-lg aspect-[3/4] hover:bg-indigo-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+				<Fa icon={faPhp} class="text-indigo-600 text-4xl mb-2" />
+				<span class="text-sm font-semibold text-indigo-800">PHP</span>
+			</div>
+			<!-- Bases de Datos -->
+			<div class="bg-gray-100 rounded-lg aspect-[3/4] hover:bg-gray-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+				<Fa icon={faDatabase} class="text-gray-600 text-4xl mb-2" />
+				<span class="text-sm font-semibold text-gray-800">Bases de Datos</span>
+			</div>
+			<!-- Servidores -->
+			<div class="bg-yellow-100 rounded-lg aspect-[3/4] hover:bg-yellow-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+				<Fa icon={faServer} class="text-yellow-600 text-4xl mb-2" />
+				<span class="text-sm font-semibold text-yellow-800">Servidores</span>
+			</div>
+			<!-- Terminal -->
+			<div class="bg-gray-700 rounded-lg aspect-[3/4] hover:bg-gray-800 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+				<Fa icon={faTerminal} class="text-gray-100 text-4xl mb-2" />
+				<span class="text-sm font-semibold text-gray-200">Terminal</span>
+			</div>
+			<!-- Git Branching -->
+			<div class="bg-green-100 rounded-lg aspect-[3/4] hover:bg-green-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+				<Fa icon={faCodeBranch} class="text-green-600 text-4xl mb-2" />
+				<span class="text-sm font-semibold text-green-800">Branching</span>
+			</div>
 		</div>
 	</section>
 
@@ -160,14 +190,26 @@
 	<section class="mb-12">
 		<h2 class="text-2xl font-bold text-gray-900 mb-6">Proyectos Universitarios</h2>
 		<div class="grid grid-cols-4 gap-4">
-			<!-- Rectángulo 1 -->
-			<div class="bg-gray-200 rounded-lg aspect-[3/4] hover:bg-black transition-colors cursor-pointer"></div>
-			<!-- Rectángulo 2 -->
-			<div class="bg-gray-200 rounded-lg aspect-[3/4] hover:bg-gray-300 transition-colors cursor-pointer"></div>
-			<!-- Rectángulo 3 -->
-			<div class="bg-gray-200 rounded-lg aspect-[3/4] hover:bg-gray-300 transition-colors cursor-pointer"></div>
-			<!-- Rectángulo 4 -->
-			<div class="bg-gray-200 rounded-lg aspect-[3/4] hover:bg-gray-300 transition-colors cursor-pointer"></div>
+			<!-- Tesis -->
+			<div class="bg-yellow-100 rounded-lg aspect-[3/4] hover:bg-yellow-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+				<Fa icon={faGraduationCap} class="text-yellow-600 text-4xl mb-2" />
+				<span class="text-sm font-semibold text-yellow-800">Tesis</span>
+			</div>
+			<!-- Gráficos 3D -->
+			<div class="bg-purple-100 rounded-lg aspect-[3/4] hover:bg-purple-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+				<Fa icon={faCube} class="text-purple-600 text-4xl mb-2" />
+				<span class="text-sm font-semibold text-purple-800">Gráficos 3D</span>
+			</div>
+			<!-- Robótica -->
+			<div class="bg-teal-100 rounded-lg aspect-[3/4] hover:bg-teal-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+				<Fa icon={faRobot} class="text-teal-600 text-4xl mb-2" />
+				<span class="text-sm font-semibold text-teal-800">Robótica</span>
+			</div>
+			<!-- Algoritmia -->
+			<div class="bg-indigo-100 rounded-lg aspect-[3/4] hover:bg-indigo-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+				<Fa icon={faFileCode} class="text-indigo-600 text-4xl mb-2" />
+				<span class="text-sm font-semibold text-indigo-800">Algoritmia</span>
+			</div>
 		</div>
 	</section>
 
