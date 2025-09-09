@@ -29,9 +29,8 @@
 		<h1 class="text-4xl font-bold text-gray-900 mb-4">Blog</h1>
 		<p class="text-lg text-gray-600">Artículos sobre desarrollo, tecnología y más</p>
 	</header>
-
 	<div class="space-y-8">
-		{#each posts as post}
+		<!-- Blog Post List 		{#each posts as post}
 			<article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
 				<header class="mb-4">
 					<h2 class="text-2xl font-semibold text-gray-900 mb-2">
@@ -63,5 +62,7 @@
 				</a>
 			</article>
 		{/each}
+-->
+
 	</div>
 </div>
