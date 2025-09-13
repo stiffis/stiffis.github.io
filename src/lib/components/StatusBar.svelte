@@ -23,15 +23,13 @@
       window.addEventListener('offline', onOff);
 
       // Navigation indicator
-      const unBefore = beforeNavigate(() => (isNavigating = true));
-      const unAfter = afterNavigate(() => (isNavigating = false));
+      beforeNavigate(() => (isNavigating = true));
+      afterNavigate(() => (isNavigating = false));
 
       return () => {
         clearInterval(timer);
         window.removeEventListener('online', onOn);
         window.removeEventListener('offline', onOff);
-        unBefore?.();
-        unAfter?.();
       };
     }
 
