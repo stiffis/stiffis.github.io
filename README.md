@@ -1,38 +1,66 @@
-# sv
+# Caffeine Overflow
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Sitio estático con SvelteKit 2 + Svelte 5 (Runes) y Vite 7. Incluye theming multi‑paleta, componentes estilizados y una status bar interactiva tipo terminal.
 
-## Creating a project
+## 🚀 Características
+- Temas: Catppuccin (Latte/Mocha), Gruvbox (Light/Dark) y Kanagawa.
+- Status Bar fija inferior: ruta actual (copiable), hora, estado de red y cambio rápido de tema.
+- Estilos consistentes tipo “terminal” y utilidades de color por tono (`-600/-700/-800`).
+- Generación estática con `@sveltejs/adapter-static` lista para hosting estático.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 📦 Requisitos
+- `Node.js` ≥ 18 (probado con 22.x)
+- `npm` o `pnpm` (cualquiera funciona)
 
-```sh
-# create a new project in the current directory
-npx sv create
+## 🛠️ Instalación
+- Clonar el repositorio y entrar al directorio.
+- Instalar dependencias: `npm install`
 
-# create a new project in my-app
-npx sv create my-app
-```
+## 🧑‍💻 Desarrollo
+- Servidor de desarrollo: `npm run dev`
+- Tipos y diagnóstico Svelte: `npm run check`
+- Linter + Prettier: `npm run lint`
+- Formateo: `npm run format`
+- Tests unitarios (Vitest):
+  - Ver en modo interactivo: `npm run test:unit`
+  - Ejecutar en modo CI: `npm run test`
 
-## Developing
+## 🏗️ Build y Preview
+- Construir producción (SSR + client): `npm run build`
+- Previsualizar build: `npm run preview`
+- Salida estática lista en `build/` (por `adapter-static`). Sirve en cualquier hosting estático.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## 🗂️ Estructura del proyecto (resumen)
+- `src/routes/` rutas de la app (SvelteKit).
+- `src/lib/components/` componentes compartidos (p. ej. `Navigation`, `ThemeToggle`, `StatusBar`).
+- `src/lib/stores/` stores (p. ej. `theme.ts`).
+- `src/app.css` estilos globales y temas (variables CSS por paleta).
+- `svelte.config.js` configuración SvelteKit (mdsvex y adapter-static).
 
-```sh
-npm run dev
+## 🎨 Temas
+- El tema activo se aplica en `<html data-theme="...">` y se persiste en `localStorage`.
+- Store: `theme` en `src/lib/stores/theme.ts` con helpers `setTheme` y `nextTheme`.
+- Componente: `ThemeToggle.svelte` (selector) y Status Bar (cambio rápido por clic).
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## 📟 Status Bar
+Componente `src/lib/components/StatusBar.svelte` (fija al fondo):
+- Centro: ruta actual; clic para copiar al portapapeles.
+- Derecha: estado de red (Online/Offline), tema actual (clic para cambiar) y hora.
+- Indicador de navegación (animación) durante transiciones entre rutas.
 
-## Building
+## 🔧 Scripts útiles
+- `dev`: arranca Vite en modo desarrollo.
+- `build`: compila para producción (client + server) y exporta a `build/`.
+- `preview`: sirve el build de producción localmente.
+- `check`: sincroniza y corre `svelte-check` con `tsconfig` del proyecto.
+- `lint`: ESLint + Prettier (solo chequeo).
+- `format`: Prettier (escritura).
+- `test` / `test:unit`: tests con Vitest.
 
-To create a production version of your app:
+## 📝 Notas de despliegue
+- Usa `@sveltejs/adapter-static`, por lo que el contenido de `build/` se puede subir a:
+  - GitHub Pages (usuario/organización o proyecto en raíz), Netlify, Vercel (modo estático) u otro hosting estático.
+- Si publicas bajo subruta, configura `paths.base` en `svelte.config.js` según tu dominio.
 
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+---
+Author: stiffis · License: MIT (ver `package.json`).
