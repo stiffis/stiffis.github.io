@@ -50,42 +50,42 @@
 		<h2 class="text-2xl font-bold text-gray-900 mb-6">Desarrollo Web</h2>
 		<div class="grid grid-cols-4 gap-4">
 			<!-- HTML5 -->
-			<div class="bg-orange-100 rounded-lg aspect-[3/4] hover:bg-orange-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-orange-100 rounded-lg aspect-[3/4] hover:bg-orange-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faHtml5} class="text-orange-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-orange-800">HTML5</span>
 			</div>
 			<!-- CSS3 -->
-			<div class="bg-blue-100 rounded-lg aspect-[3/4] hover:bg-blue-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-blue-100 rounded-lg aspect-[3/4] hover:bg-blue-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faCss3Alt} class="text-blue-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-blue-800">CSS3</span>
 			</div>
 			<!-- JavaScript -->
-			<div class="bg-yellow-100 rounded-lg aspect-[3/4] hover:bg-yellow-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-yellow-100 rounded-lg aspect-[3/4] hover:bg-yellow-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faJs} class="text-yellow-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-yellow-800">JavaScript</span>
 			</div>
 			<!-- React -->
-			<div class="bg-cyan-100 rounded-lg aspect-[3/4] hover:bg-cyan-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-cyan-100 rounded-lg aspect-[3/4] hover:bg-cyan-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faReact} class="text-cyan-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-cyan-800">React</span>
 			</div>
 			<!-- Vue.js -->
-			<div class="bg-green-100 rounded-lg aspect-[3/4] hover:bg-green-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-green-100 rounded-lg aspect-[3/4] hover:bg-green-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faVuejs} class="text-green-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-green-800">Vue.js</span>
 			</div>
 			<!-- Angular -->
-			<div class="bg-red-100 rounded-lg aspect-[3/4] hover:bg-red-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-red-100 rounded-lg aspect-[3/4] hover:bg-red-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faAngular} class="text-red-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-red-800">Angular</span>
 			</div>
 			<!-- Svelte -->
-			<div class="bg-orange-100 rounded-lg aspect-[3/4] hover:bg-orange-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-orange-100 rounded-lg aspect-[3/4] hover:bg-orange-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faCode} class="text-orange-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-orange-800">Svelte</span>
 			</div>
 			<!-- Node.js -->
-			<div class="bg-green-100 rounded-lg aspect-[3/4] hover:bg-green-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-green-100 rounded-lg aspect-[3/4] hover:bg-green-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faNode} class="text-green-700 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-green-800">Node.js</span>
 			</div>
@@ -97,7 +97,7 @@
 		<h2 class="text-2xl font-bold text-gray-900 mb-6">Machine Learning</h2>
 		<div class="grid grid-cols-4 gap-4">
 			<!-- Python -->
-			<div class="bg-blue-100 rounded-lg aspect-[3/4] hover:bg-blue-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-blue-100 rounded-lg aspect-[3/4] hover:bg-blue-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faPython} class="text-blue-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-blue-800">Python</span>
 			</div>
@@ -107,7 +107,7 @@
 				<span class="text-sm font-semibold text-orange-800">TensorFlow</span>
 			</div>
 			<!-- PyTorch -->
-			<div class="bg-red-100 rounded-lg aspect-[3/4] hover:bg-red-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-red-100 rounded-lg aspect-[3/4] hover:bg-red-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faRobot} class="text-red-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-red-800">PyTorch</span>
 			</div>
@@ -139,37 +139,37 @@
 				<span class="text-sm font-semibold text-red-800">Git</span>
 			</div>
 			<!-- GitHub -->
-			<div class="bg-gray-100 rounded-lg aspect-[3/4] hover:bg-gray-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-gray-100 rounded-lg aspect-[3/4] hover:bg-gray-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faGithub} class="text-gray-800 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-gray-900">GitHub</span>
 			</div>
 			<!-- Docker -->
-			<div class="bg-blue-100 rounded-lg aspect-[3/4] hover:bg-blue-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-blue-100 rounded-lg aspect-[3/4] hover:bg-blue-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faDocker} class="text-blue-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-blue-800">Docker</span>
 			</div>
 			<!-- NPM -->
-			<div class="bg-red-100 rounded-lg aspect-[3/4] hover:bg-red-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-red-100 rounded-lg aspect-[3/4] hover:bg-red-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faNpm} class="text-red-700 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-red-800">NPM</span>
 			</div>
 			<!-- Java -->
-			<div class="bg-orange-100 rounded-lg aspect-[3/4] hover:bg-orange-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-orange-100 rounded-lg aspect-[3/4] hover:bg-orange-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faJava} class="text-orange-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-orange-800">Java</span>
 			</div>
 			<!-- PHP -->
-			<div class="bg-indigo-100 rounded-lg aspect-[3/4] hover:bg-indigo-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-indigo-100 rounded-lg aspect-[3/4] hover:bg-indigo-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faPhp} class="text-indigo-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-indigo-800">PHP</span>
 			</div>
 			<!-- Bases de Datos -->
-			<div class="bg-gray-100 rounded-lg aspect-[3/4] hover:bg-gray-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-gray-100 rounded-lg aspect-[3/4] hover:bg-gray-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faDatabase} class="text-gray-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-gray-800">Bases de Datos</span>
 			</div>
 			<!-- Servidores -->
-			<div class="bg-yellow-100 rounded-lg aspect-[3/4] hover:bg-yellow-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-yellow-100 rounded-lg aspect-[3/4] hover:bg-yellow-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faServer} class="text-yellow-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-yellow-800">Servidores</span>
 			</div>
@@ -196,17 +196,17 @@
 				<span class="text-sm font-semibold text-yellow-800">Tesis</span>
 			</div>
 			<!-- Gráficos 3D -->
-			<div class="bg-purple-100 rounded-lg aspect-[3/4] hover:bg-purple-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-purple-100 rounded-lg aspect-[3/4] hover:bg-purple-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faCube} class="text-purple-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-purple-800">Gráficos 3D</span>
 			</div>
 			<!-- Robótica -->
-			<div class="bg-teal-100 rounded-lg aspect-[3/4] hover:bg-teal-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-teal-100 rounded-lg aspect-[3/4] hover:bg-teal-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faRobot} class="text-teal-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-teal-800">Robótica</span>
 			</div>
 			<!-- Algoritmia -->
-			<div class="bg-indigo-100 rounded-lg aspect-[3/4] hover:bg-indigo-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+			<div class="card-terminal bg-indigo-100 rounded-lg aspect-[3/4] hover:bg-indigo-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
 				<Fa icon={faFileCode} class="text-indigo-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-indigo-800">Algoritmia</span>
 			</div>
