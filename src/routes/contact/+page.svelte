@@ -57,7 +57,7 @@
 					<Fa icon={faGithub} class="text-white text-xl" />
 				</a>
 				<a
-					href="https://linkedin.com/in/your-profile"
+					href="https://www.linkedin.com/in/steve-andy-ildefonso-santos-936106323/"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-colors"
@@ -65,7 +65,7 @@
 					<Fa icon={faLinkedin} class="text-white text-xl" />
 				</a>
 				<a
-					href="https://twitter.com/your-handle"
+					href="https://x.com/Stiff_GLive"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="w-12 h-12 bg-blue-400 hover:bg-blue-500 rounded-lg flex items-center justify-center transition-colors"
@@ -75,27 +75,5 @@
 			</div>
 		</div>
 
-		<!-- Available for -->
-		<div>
-			<h3 class="text-2xl font-semibold text-gray-900 mb-6">Disponible para</h3>
-			<ul class="space-y-2 text-gray-600">
-				<li class="flex items-center">
-					<span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-					Desarrollo de aplicaciones web
-				</li>
-				<li class="flex items-center">
-					<span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-					Consultoría técnica
-				</li>
-				<li class="flex items-center">
-					<span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-					Colaboraciones en proyectos
-				</li>
-				<li class="flex items-center">
-					<span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
-					Mentoring y código review
-				</li>
-			</ul>
-		</div>
 	</div>
 </div>

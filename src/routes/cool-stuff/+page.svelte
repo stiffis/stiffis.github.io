@@ -210,6 +210,13 @@
 				<Fa icon={faFileCode} class="text-indigo-600 text-4xl mb-2" />
 				<span class="text-sm font-semibold text-indigo-800">Algoritmia</span>
 			</div>
+			<!-- Meteor Madness -->
+			<a href="/cool-stuff/meteor-madness" class="block">
+				<div class="card-terminal bg-blue-100 rounded-lg aspect-[3/4] hover:bg-blue-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4">
+					<img src="/images/nasa-logo.svg" alt="Logo de la NASA" class="h-16 mb-2" />
+					<span class="text-sm font-semibold text-blue-800">Meteor Madness</span>
+				</div>
+			</a>
 		</div>
 	</section>
 
