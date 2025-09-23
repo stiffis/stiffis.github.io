@@ -9,9 +9,11 @@
 
 	let { children } = $props();
 
+	type MermaidTheme = 'default' | 'dark' | 'forest' | 'neutral' | 'base' | null | undefined;
+
 	theme.subscribe((currentTheme) => {
 		if (typeof window !== 'undefined') {
-			let mermaidTheme = 'default';
+			let mermaidTheme: MermaidTheme = 'default';
 			if (
 				currentTheme.includes('dark') ||
 				currentTheme.includes('mocha') ||
