@@ -252,7 +252,7 @@ Las contribuciones son bienvenidas. Por favor:
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia GPL v3. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la Licencia GPL v3. Consulta el archivo LICENSE para más detalles.
 
 ## 📚 Referencias
 
