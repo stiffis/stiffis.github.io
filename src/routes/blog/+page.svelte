@@ -4,17 +4,36 @@
 	let posts = [
 		{
 			id: 1,
-			title: 'My first post',
-			excerpt: 'This is an example of a blog post...',
-			date: '2025-01-09',
-			slug: 'my-first-post'
+			title: 'Mastering C Pointers',
+			excerpt: 'A deep dive into memory management and pointer arithmetic in C.',
+			date: '2025-09-25',
+			slug: 'mastering-c-pointers',
+			hashtags: ['#c', '#programming', '#pointers', '#memory']
 		},
 		{
 			id: 2,
-			title: 'Developing with SvelteKit',
-			excerpt: 'Learn to create modern applications with SvelteKit...',
-			date: '2025-01-08',
-			slug: 'developing-with-sveltekit'
+			title: 'Rust for Beginners',
+			excerpt:
+				'Exploring the fundamentals of Rust and its powerful features for safe and concurrent programming.',
+			date: '2025-09-24',
+			slug: 'rust-for-beginners',
+			hashtags: ['#rust', '#programming', '#beginners', '#safety']
+		},
+		{
+			id: 3,
+			title: 'The Art of Clean Code',
+			excerpt: 'Principles and practices for writing readable, maintainable, and scalable code.',
+			date: '2025-09-23',
+			slug: 'the-art-of-clean-code',
+			hashtags: ['#development', '#cleancode', '#architecture', '#bestpractices']
+		},
+		{
+			id: 4,
+			title: 'A Guide to WebAssembly',
+			excerpt: 'Understanding how WebAssembly is changing the web development landscape.',
+			date: '2025-09-22',
+			slug: 'a-guide-to-webassembly',
+			hashtags: ['#webassembly', '#wasm', '#webdev', '#performance']
 		}
 	];
 </script>
@@ -30,7 +49,8 @@
 		<p class="text-lg text-gray-600">Articles about development, technology, and more</p>
 	</header>
 	<div class="space-y-8">
-		<!-- Blog Post List 		{#each posts as post}
+		<!-- Blog Post List -->
+		{#each posts as post}
 			<article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
 				<header class="mb-4">
 					<h2 class="text-2xl font-semibold text-gray-900 mb-2">
@@ -47,9 +67,17 @@
 					</time>
 				</header>
 				<p class="text-gray-700 mb-4">{post.excerpt}</p>
+				<div class="mt-4">
+					{#each post.hashtags as hashtag}
+						<span
+							class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+							>{hashtag}</span
+						>
+					{/each}
+				</div>
 				<a
 					href="/blog/{post.slug}"
-					class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+					class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium mt-4"
 				>
 					Read more
 					<svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -62,7 +90,6 @@
 				</a>
 			</article>
 		{/each}
--->
-
 	</div>
 </div>
+
