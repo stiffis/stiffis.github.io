@@ -1,5 +1,7 @@
-- Add content to blog
-- Add content to cool/stuff
+- Add content to blog: The same that the other page.
+- Add content to cool/stuff:
+  - UNIVERSITY: Class Notes, IMDB, project red black tree,
+  - CONFIGS: Neovim, Dotfiles
+  - PROJECTS: PONGAI, uniTui, digit-classification, Meteor-Madness
+  - RESEARCH: Game Life Conway, Prisioner's Dilema
 - Improve content at Meteor-Madness
-
-

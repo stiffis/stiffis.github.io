@@ -4,30 +4,30 @@
 	let posts = [
 		{
 			id: 1,
-			title: 'Mi primer post',
-			excerpt: 'Este es un ejemplo de post en el blog...',
+			title: 'My first post',
+			excerpt: 'This is an example of a blog post...',
 			date: '2025-01-09',
-			slug: 'mi-primer-post'
+			slug: 'my-first-post'
 		},
 		{
 			id: 2,
-			title: 'Desarrollo con SvelteKit',
-			excerpt: 'Aprende a crear aplicaciones modernas con SvelteKit...',
+			title: 'Developing with SvelteKit',
+			excerpt: 'Learn to create modern applications with SvelteKit...',
 			date: '2025-01-08',
-			slug: 'desarrollo-con-sveltekit'
+			slug: 'developing-with-sveltekit'
 		}
 	];
 </script>
 
 <svelte:head>
 	<title>Blog - Caffeine Overflow</title>
-	<meta name="description" content="Blog personal con artículos sobre desarrollo y tecnología" />
+	<meta name="description" content="Personal blog with articles about development and technology" />
 </svelte:head>
 
 <div class="max-w-4xl mx-auto px-4 py-8">
 	<header class="mb-12 text-center">
 		<h1 class="text-4xl font-bold text-gray-900 mb-4">Blog</h1>
-		<p class="text-lg text-gray-600">Artículos sobre desarrollo, tecnología y más</p>
+		<p class="text-lg text-gray-600">Articles about development, technology, and more</p>
 	</header>
 	<div class="space-y-8">
 		<!-- Blog Post List 		{#each posts as post}
@@ -39,7 +39,7 @@
 						</a>
 					</h2>
 					<time class="text-sm text-gray-500" datetime={post.date}>
-						{new Date(post.date).toLocaleDateString('es-ES', {
+						{new Date(post.date).toLocaleDateString('en-US', {
 							year: 'numeric',
 							month: 'long',
 							day: 'numeric'
@@ -51,7 +51,7 @@
 					href="/blog/{post.slug}"
 					class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
 				>
-					Leer más
+					Read more
 					<svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
 						<path
 							fill-rule="evenodd"

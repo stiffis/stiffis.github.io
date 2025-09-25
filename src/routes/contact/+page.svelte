@@ -5,20 +5,20 @@
 </script>
 
 <svelte:head>
-	<title>Contacto - Caffeine Overflow</title>
-	<meta name="description" content="Ponte en contacto conmigo para proyectos, colaboraciones o consultas" />
+	<title>Contact - Caffeine Overflow</title>
+	<meta name="description" content="Get in touch with me for projects, collaborations, or inquiries" />
 </svelte:head>
 
 <div class="max-w-4xl mx-auto px-4 py-8">
 	<header class="mb-12 text-center">
-		<h1 class="text-4xl font-bold text-gray-900 mb-4">Contacto</h1>
-		<p class="text-lg text-gray-600">¡Me encantaría escucharte!</p>
+		<h1 class="text-4xl font-bold text-gray-900 mb-4">Contact</h1>
+		<p class="text-lg text-gray-600">I'd love to hear from you!</p>
 	</header>
 
 	<div class="space-y-8">
 		<!-- Contact Information -->
 		<div>
-			<h2 class="text-2xl font-semibold text-gray-900 mb-6">Información de Contacto</h2>
+			<h2 class="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h2>
 			<div class="space-y-4">
 				<div class="flex items-center">
 					<div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -37,8 +37,8 @@
 						<Fa icon={faMapMarkerAlt} class="text-green-600" />
 					</div>
 					<div class="ml-4">
-						<p class="text-sm font-medium text-gray-900">Ubicación</p>
-						<p class="text-gray-600">Lima, Perú</p>
+						<p class="text-sm font-medium text-gray-900">Location</p>
+						<p class="text-gray-600">Lima, Peru</p>
 					</div>
 				</div>
 			</div>
@@ -46,7 +46,7 @@
 
 		<!-- Social Media -->
 		<div>
-			<h3 class="text-2xl font-semibold text-gray-900 mb-6">Sígueme en</h3>
+			<h3 class="text-2xl font-semibold text-gray-900 mb-6">Follow me on</h3>
 			<div class="flex space-x-4">
 				<a
 					href="https://github.com/stiffis"
