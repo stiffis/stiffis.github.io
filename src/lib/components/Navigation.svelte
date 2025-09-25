@@ -41,7 +41,7 @@
 					class:text-blue-600={currentPath === '/contact'}
 					class:font-semibold={currentPath === '/contact'}
 				>
-					Contacto
+					Contact
 				</a>
 			</div>
 
