@@ -1,1 +1,108 @@
+---
+title: Digit Classification
+---
 
+<script>
+	import MarkdownCard from '$lib/components/MarkdownCard.svelte';
+	import { Fa } from 'svelte-fa';
+	import {
+		faSortNumericUp
+	} from '@fortawesome/free-solid-svg-icons';
+</script>
+
+<svelte:head>
+	<title>Meteor Madness - Caffeine Overflow</title>
+	<meta
+		name="description"
+		content="Prototipo inspirado en la NASA que combina astrofísica, simulaciones y narrativa interactiva."
+	/>
+</svelte:head>
+
+<div class="max-w-4xl mx-auto px-4 py-12 space-y-10">
+	<header class="space-y-4 text-center">
+		<p class="inline-flex items-center gap-2 text-teal-600 font-semibold uppercase tracking-wide">
+
+					<Fa icon={faSortNumericUp} class="text-teal-600 text-4xl mb-2" />
+Digit Classification
+		</p>
+		<h1 class="text-4xl font-bold text-gray-900"> Programación I: Proyecto Final (2024-1)</h1>
+		<p class="text-lg text-gray-600">
+			
+This is a 1st semester project at UTEC, it classifies a written digit. It uses the Digit DataSet from Scikit-Learn.
+
+		</p>
+	</header>
+
+<div class="flex justify-center flex-wrap gap-2">
+<br>
+<a href="#Linux"><img src="https://img.shields.io/badge/os-linux-brightgreen"></a>
+<a href="#MacOS"><img src="https://img.shields.io/badge/os-mac-brightgreen"></a>
+<a href="#Windows"><img src="https://img.shields.io/badge/os-windows-yellowgreen"></a>
+<br>
+</div>
+
+<div class="flex justify-center flex-wrap gap-2">
+<a href="https://github.com/stiffis"><img src="https://img.shields.io/badge/maintainer-stiffis-blue"></a>
+
+</div>
+
+
+	<MarkdownCard>
+
+## Installation
+1. Clone the project
+2. Create a virtual environment in the root directory with:
+    >python -m venv env
+3. Activate the virtual environment:
+    >env\Scripts\activate
+    In case it doesn't work:
+    - Open PowerShell as administrator
+    - And copy the following line (give ‘Y’ to everything):
+        >Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+    - Try again to activate the virtual environment.
+4. Install the dependencies with:
+    >pip install -r requirements.txt
+## Main commands to navigate Git Bash:
+- Start the local repository.
+    > git init
+- Change the address of the folder/directory you are in.
+    > cd ‘name of the directory/folder to move’
+- Changes to the previous folder/directory address.
+    >cd ...
+- Check the status of the local repository.
+    >git status
+- Start tracking files.
+    >git add ‘filename’
+- Make a screenshot or a save of what has been done so far.
+    >git commit -m ‘descriptive message about what's been done’   
+- Push the changes to GitHub(care)‼️‼️.
+    >git push origin ‘name of your branch’
+- Get changes from GitHub.
+    >git pull origin ‘name of branch’
+- Create new branch.
+    >git branch ‘name of the branch’
+- Move between branches.
+    >git checkout ‘name of branch’
+- List of existing branches.
+    >git branch
+- Merge branches with the current branch.
+    >git merge ‘name of branch to be merged’
+- Fetch all branches from the remote repository.
+    >git fetch
+- Remove local branch.
+    >git branch -d ‘name of branch to remove’
+- Remove a branch from GitHub(care)‼️‼️.
+    >git push origin --delete ‘name of the branch’
+- Show commit history:
+    >git log
+- Show the differences between commits:
+    >git diff
+- When you want to deactivate the virtual environment:
+    >deactivate
+- When you want to add more dependencies to the (requirements.txt)
+    >pip freeze > requirements.txt
+
+Thanks :3
+
+    </MarkdownCard>
+</div>

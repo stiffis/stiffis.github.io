@@ -1,6 +1,6 @@
 
 ---
-title: Meteor Madness
+title: project-red-black-tree
 ---
 
 <script>
@@ -8,7 +8,7 @@ title: Meteor Madness
 </script>
 
 <svelte:head>
-	<title>Meteor Madness - Caffeine Overflow</title>
+	<title>Red Black Tree Project - Caffeine Overflow</title>
 	<meta
 		name="description"
 		content="Prototipo inspirado en la NASA que combina astrofísica, simulaciones y narrativa interactiva."
@@ -21,33 +21,21 @@ title: Meteor Madness
 			<img src="/images/nasa-logo.svg" alt="Logo de la NASA" class="h-10" />
 			Meteor Madness
 		</p>
-		<h1 class="text-4xl font-bold text-gray-900">Cazando meteoritos con ayuda de la NASA</h1>
+		<h1 class="text-4xl font-bold text-gray-900">🌳 Red-Black Tree Implementation</h1>
 		<p class="text-lg text-gray-600">
-			Una experiencia inmersiva donde exploramos trayectorias orbitales, impactos y telemetría en tiempo real.
+Implementación completa de un <b>Árbol Rojo-Negro</b> (Red-Black Tree) con visualización interactiva web. Este proyecto incluye tanto la implementación pura de la estructura de datos como una interfaz visual que permite realizar operaciones de inserción, eliminación y búsqueda de manera interactiva.
 		</p>
 	</header>
 
 <div class="flex justify-center flex-wrap gap-2">
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
-  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js">
-  <img src="https://img.shields.io/badge/D3.js-F9A826?style=for-the-badge&logo=d3.js&logoColor=white" alt="D3.js">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License">
-</div>
-
-
-	<MarkdownCard>
-
-# 🌳 Red-Black Tree Implementation
-
-<div align="center">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
   <img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg?style=for-the-badge" alt="License">
 </div>
+
+
+	<MarkdownCard>
 
 ## 📋 Descripción
 

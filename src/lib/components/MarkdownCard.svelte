@@ -157,6 +157,20 @@
 		margin-block: clamp(0.75rem, 1.5vw, 1.25rem);
 	}
 
+	.markdown-card :global(ul) {
+		list-style: disc;
+		padding-left: 2rem;
+	}
+
+	.markdown-card :global(ol) {
+		list-style: decimal;
+		padding-left: 2rem;
+	}
+
+	.markdown-card :global(li) {
+		margin-bottom: 0.5rem;
+	}
+
 	.markdown-card :global(h1),
 	.markdown-card :global(h2),
 	.markdown-card :global(h3),
