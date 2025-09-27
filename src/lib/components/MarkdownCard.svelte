@@ -315,4 +315,21 @@
 		font-size: 0.9rem;
 		opacity: 0.8;
 	}
+
+	.markdown-card :global(table) {
+		width: 100%;
+		border-collapse: collapse;
+		margin-block: clamp(0.75rem, 1.5vw, 1.25rem);
+	}
+
+	.markdown-card :global(th),
+	.markdown-card :global(td) {
+		border: 1px solid var(--block-code-border);
+		padding: 0.75rem;
+		text-align: left;
+	}
+
+	.markdown-card :global(th) {
+		background-color: var(--block-code-bg);
+	}
 </style>

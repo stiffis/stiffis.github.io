@@ -2,6 +2,6 @@
 - Add content to cool/stuff:
   - UNIVERSITY: Class Notes
   - CONFIGS: Neovim, Dotfiles
-  - PROJECTS: PONGAI, uniTui, 
-  - RESEARCH: Game Life Conway, Prisioner's Dilema
+  - PROJECTS: PONGAI, uniTui,
+  - RESEARCH: Game Life Conway
 - Improve content at Meteor-Madness

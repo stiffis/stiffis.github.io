@@ -46,10 +46,10 @@ Un CLI para buscar películas, así como sus respectivas sinopsis y géneros
 
 <div class="flex justify-center flex-wrap gap-2">
 <br>
-<a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></a>
-<a href="#Linux"><img src="https://img.shields.io/badge/os-linux-brightgreen"></a>
-<a href="#MacOS"><img src="https://img.shields.io/badge/os-mac-brightgreen"></a>
-<a href="#Windows"><img src="https://img.shields.io/badge/os-windows-yellowgreen"></a>
+<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg">
+<img src="https://img.shields.io/badge/os-linux-brightgreen">
+<img src="https://img.shields.io/badge/os-mac-brightgreen">
+<img src="https://img.shields.io/badge/os-windows-yellowgreen">
 <br>
 </div>
 
@@ -64,7 +64,7 @@ Un CLI para buscar películas, así como sus respectivas sinopsis y géneros
 
 <div align=center>
 <h1 align="center">
-<a href="logo"><img src="{logo}"></a>
+<img src="{logo}">
 </div>
 
 ---
