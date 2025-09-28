@@ -5,6 +5,7 @@ title: Meteor Madness
 <script>
 	import MarkdownCard from '$lib/components/MarkdownCard.svelte';
 	import linus from './linus.png';
+	import img from './img.png';
 </script>
 
 <svelte:head>
@@ -102,6 +103,7 @@ El objetivo es crear un **prototipo funcional** de la herramienta web que sea ca
 A continuación, se muestran algunos **bocetos** de la interfaz de usuario, que ilustran cómo se organizarán las pantallas y cómo los usuarios interactuarán con la herramienta.
 
 ![Boceto de la Interfaz]({linus})  
+![Boceto 2]({img})
 
 ## Conclusiones
 
