@@ -6,6 +6,7 @@ title: Meteor Madness
 	import MarkdownCard from '$lib/components/MarkdownCard.svelte';
 	import linus from './linus.png';
 	import img from './img.png';
+	import img2 from './img2.png';
 </script>
 
 <svelte:head>
@@ -104,6 +105,10 @@ A continuación, se muestran algunos **bocetos** de la interfaz de usuario, que 
 
 ![Boceto de la Interfaz]({linus})  
 ![Boceto 2]({img})
+
+### Avances
+
+![Boceto 3]({img2})
 
 ## Conclusiones
 
