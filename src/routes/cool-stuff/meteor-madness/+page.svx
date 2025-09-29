@@ -7,6 +7,7 @@ title: Meteor Madness
 	import linus from './linus.png';
 	import img from './img.png';
 	import img2 from './img2.png';
+	import img3 from './img3.png';
 </script>
 
 <svelte:head>
@@ -109,6 +110,7 @@ A continuación, se muestran algunos **bocetos** de la interfaz de usuario, que 
 ### Avances
 
 ![Boceto 3]({img2})
+![Boceto 4]({img3})
 
 ## Conclusiones
 
