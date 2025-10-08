@@ -14,7 +14,6 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"prepare": "husky",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test:unit": "vitest",
@@ -34,6 +33,7 @@
 		"markdown-it-highlightjs": "^4.2.0",
 		"markdown-it-implicit-figures": "^0.12.0",
 		"markdown-it-texmath": "^1.0.0",
+		"markdown-it-toc-done-right": "^4.2.0",
 		"reading-time": "^1.5.0",
 		"svelte-fa": "^4.0.4"
 	},

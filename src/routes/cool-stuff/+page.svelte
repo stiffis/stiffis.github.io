@@ -151,6 +151,15 @@
 					<span class="text-sm font-semibold text-cyan-800">Prisioner's Dilema</span>
 				</div>
 			</a>
+			<!-- Hamming Code -->
+			<a href="/cool-stuff/hamming-code" class="block">
+				<div
+					class="card-terminal bg-green-100 rounded-lg aspect-[3/4] hover:bg-green-200 transition-colors cursor-pointer flex flex-col items-center justify-center p-4"
+				>
+					<img src="/images/err-corr.svg" alt="Hamming Code Logo" class="h-12 mb-2" />
+					<span class="text-sm font-semibold text-green-800">Hamming Code</span>
+				</div>
+			</a>
 		</div>
 	</section>
 </div>

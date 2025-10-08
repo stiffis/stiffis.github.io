@@ -1,0 +1,130 @@
+---
+title: Hamming Code
+---
+
+<script>
+	import MarkdownCard from '$lib/components/MarkdownCard.svelte';
+</script>
+
+<svelte:head>
+	<title>Hamming Code - Caffeine Overflow</title>
+	<meta
+		name="description"
+		content="Implementation and analysis of Hamming codes for error correction in data transmission."
+	/>
+</svelte:head>
+
+<div class="max-w-4xl mx-auto px-4 py-12 space-y-10">
+	<header class="space-y-4 text-center">
+		<p class="inline-flex items-center gap-2 text-green-600 font-semibold uppercase tracking-wide">
+			<img src="/images/err-corr.svg" alt="Hamming Code Logo" class="h-8" />
+			Hamming Code
+		</p>
+		<h1 class="text-4xl font-bold text-gray-900">Hamming Codes for Error Correction</h1>
+		<p class="text-lg text-gray-600">
+			Implementation of error detection and correction algorithms using Hamming codes
+		</p>
+	</header>
+
+
+
+	<MarkdownCard>
+
+## Descripción del Proyecto
+
+Los códigos de Hamming son una familia de códigos de corrección de errores lineales que permiten la detección y corrección automática de errores de un solo bit en la transmisión de datos. Este proyecto implementa tanto la codificación como la decodificación de códigos de Hamming.
+### Características Principales
+
+- **Codificación Hamming**: Genera bits de paridad para proteger los datos
+- **Detección de Errores**: Identifica errores de 1 y 2 bits
+- **Corrección Automática**: Corrige errores de un solo bit automáticamente
+- **Visualización**: Muestra el proceso paso a paso de codificación y corrección
+
+### Tecnologías Utilizadas
+
+- **Lenguaje**: C/C++
+- **Algoritmos**: Códigos de Hamming (7,4) y (15,11)
+- **Matemáticas**: Álgebra lineal sobre campos finitos
+- **Testing**: Casos de prueba exhaustivos con inyección de errores
+
+## How It Works
+
+### Encoding Process
+
+1. **Data Input**: Information bits to be transmitted are received
+2. **Parity Calculation**: Parity bits are generated using XOR operations
+3. **Insertion**: Parity bits are inserted at specific positions (powers of 2)
+4. **Output**: The codeword ready for transmission is obtained
+
+### Correction Process
+
+1. **Reception**: The codeword is received (possibly with errors)
+2. **Syndrome**: Error syndrome is calculated using parity bits
+3. **Localization**: The syndrome indicates the error position (if any)
+4. **Correction**: The erroneous bit is corrected and original data is extracted
+
+## Implementation
+
+### Code Structure
+
+```c
+// Structure to handle Hamming codes
+typedef struct {
+    int data_bits;      // Number of data bits
+    int parity_bits;    // Number of parity bits
+    int total_bits;     // Total bits in codeword
+    int* parity_matrix; // Parity generation matrix
+} HammingCode;
+
+// Main functions
+int* hamming_encode(int* data, int data_length);
+int* hamming_decode(int* received, int* corrected_data);
+int calculate_syndrome(int* received, HammingCode* code);
+void correct_error(int* received, int error_position);
+```
+
+### Correction Algorithm
+
+The algorithm uses the error syndrome to determine the position of the erroneous bit:
+
+- **Syndrome = 0**: No errors
+- **Syndrome > 0**: Error position equals syndrome value
+- **Double error**: Detected but not correctable
+
+## Results and Analysis
+
+### Correction Capability
+
+- ✅ **1-bit errors**: 100% effective detection and correction
+- ✅ **2-bit errors**: Reliable detection (not correctable)
+- ❌ **3+ bit errors**: May go undetected
+
+### Efficiency
+
+- **Code (7,4)**: 4 data bits + 3 parity bits = 57% efficiency
+- **Code (15,11)**: 11 data bits + 4 parity bits = 73% efficiency
+- **Overhead**: Decreases logarithmically with block size
+
+## Practical Applications
+
+Hamming codes are used in:
+
+- **RAM Memory**: ECC (Error Correcting Code) correction
+- **Storage**: Hard drives and SSDs
+- **Communications**: Reliable data transmission
+- **Embedded Systems**: Protection against interference
+
+## Conclusions
+
+This project demonstrates the mathematical elegance of Hamming codes and their practical importance in modern digital systems. The ability to automatically detect and correct errors is fundamental to the reliability of computing systems.
+
+### Key Learnings
+
+- Deep understanding of error-correcting code theory
+- Efficient implementation of correction algorithms
+- Analysis of trade-offs between redundancy and reliability
+- Practical application of abstract mathematical concepts
+
+ty:3
+	</MarkdownCard>
+</div>

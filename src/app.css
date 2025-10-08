@@ -430,8 +430,88 @@ pre, code, kbd, samp {
 	font-family: var(--font-mono);
 }
 
-h1, h2, h3, h4 {
-	text-shadow: 0 0 6px color-mix(in srgb, var(--c-accent) 20%, transparent);
+/* Heading styles with colors */
+h1 {
+	color: var(--c-blue-700);
+	text-shadow: 0 0 8px color-mix(in srgb, var(--c-blue-600) 30%, transparent);
+	border-bottom: 2px solid var(--c-blue-600);
+	padding-bottom: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+
+h2 {
+	color: var(--c-green-700);
+	text-shadow: 0 0 6px color-mix(in srgb, var(--c-green-600) 25%, transparent);
+	border-left: 4px solid var(--c-green-600);
+	padding-left: 1rem;
+	margin-bottom: 1.25rem;
+	position: relative;
+}
+
+h3 {
+	color: var(--c-purple-700);
+	text-shadow: 0 0 4px color-mix(in srgb, var(--c-purple-600) 20%, transparent);
+	position: relative;
+	margin-bottom: 1rem;
+}
+
+h3::before {
+	content: "▶";
+	color: var(--c-purple-600);
+	margin-right: 0.5rem;
+	font-size: 0.8em;
+}
+
+h4 {
+	color: var(--c-orange-700);
+	text-shadow: 0 0 4px color-mix(in srgb, var(--c-orange-600) 20%, transparent);
+	text-decoration: underline;
+	text-decoration-color: var(--c-orange-600);
+	text-underline-offset: 0.25rem;
+	margin-bottom: 0.75rem;
+	position: relative;
+}
+
+h5 {
+	color: var(--c-cyan-700);
+	text-shadow: 0 0 3px color-mix(in srgb, var(--c-cyan-600) 15%, transparent);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin-bottom: 0.5rem;
+	position: relative;
+}
+
+h6 {
+	color: var(--c-red-700);
+	text-shadow: 0 0 3px color-mix(in srgb, var(--c-red-600) 15%, transparent);
+	font-weight: 500;
+	font-style: italic;
+	margin-bottom: 0.5rem;
+	position: relative;
+}
+
+/* Header anchor links */
+.header-anchor {
+	opacity: 0;
+	margin-left: 0.5rem;
+	color: var(--c-accent);
+	text-decoration: none;
+	font-weight: 400;
+	transition: opacity 0.2s ease;
+}
+
+h1:hover .header-anchor,
+h2:hover .header-anchor,
+h3:hover .header-anchor,
+h4:hover .header-anchor,
+h5:hover .header-anchor,
+h6:hover .header-anchor {
+	opacity: 0.7;
+}
+
+.header-anchor:hover {
+	opacity: 1 !important;
 }
 
 /* Card border without overriding background */
