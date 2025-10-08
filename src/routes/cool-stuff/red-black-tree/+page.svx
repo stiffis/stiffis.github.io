@@ -1,6 +1,6 @@
 
 ---
-title: project-red-black-tree
+title: Red-Black Tree Implementation
 ---
 
 <script>
@@ -8,20 +8,20 @@ title: project-red-black-tree
 </script>
 
 <svelte:head>
-	<title>Red Black Tree Project - Caffeine Overflow</title>
+	<title>Red-Black Tree Implementation - Caffeine Overflow</title>
 	<meta
 		name="description"
-		content="Prototipo inspirado en la NASA que combina astrofísica, simulaciones y narrativa interactiva."
+		content="Implementación completa de un Árbol Rojo-Negro con visualización interactiva web."
 	/>
 </svelte:head>
 
 <div class="max-w-4xl mx-auto px-4 py-12 space-y-10">
 	<header class="space-y-4 text-center">
-		<p class="inline-flex items-center gap-2 text-blue-800 font-semibold uppercase tracking-wide">
-			<img src="/images/nasa-logo.svg" alt="Logo de la NASA" class="h-10" />
-			Meteor Madness
+		<p class="inline-flex items-center gap-2 text-red-800 font-semibold uppercase tracking-wide">
+			<img src="/images/rbt.svg" alt="Red Black Tree Logo" class="h-10" />
+			Red Black Tree
 		</p>
-		<h1 class="text-4xl font-bold text-gray-900">🌳 Red-Black Tree Implementation</h1>
+		<h1 class="text-4xl font-bold text-gray-900">Red-Black Tree Implementation</h1>
 		<p class="text-lg text-gray-600">
 Implementación completa de un <b>Árbol Rojo-Negro</b> (Red-Black Tree) con visualización interactiva web. Este proyecto incluye tanto la implementación pura de la estructura de datos como una interfaz visual que permite realizar operaciones de inserción, eliminación y búsqueda de manera interactiva.
 		</p>

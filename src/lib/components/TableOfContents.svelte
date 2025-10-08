@@ -74,7 +74,7 @@
 			{#each tocItems as item}
 				<li class="toc-item level-{item.level}" class:active={activeId === item.id}>
 					<button 
-						class="toc-link"
+						class="toc-link level-{item.level}-link"
 						onclick={() => scrollToHeading(item.id)}
 						title="Go to {item.text}"
 					>
@@ -92,14 +92,14 @@
 		top: 5rem;
 		right: 1rem;
 		width: 12rem;
-		max-height: calc(100vh - 7rem);
+		max-height: calc(100vh - 10rem);
 		overflow-y: auto;
 		z-index: 40;
 		backdrop-filter: blur(8px);
 		border-radius: 0.5rem;
 		border: 1px solid;
-		padding: 0.75rem;
-		font-size: 0.75rem;
+		padding: 0.5rem;
+		font-size: 0.7rem;
 		transition: all 0.3s ease;
 		box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.1), 0 4px 8px -4px rgba(0, 0, 0, 0.08);
 	}
@@ -112,14 +112,14 @@
 	}
 
 	.toc-header {
-		margin-bottom: 0.5rem;
-		padding-bottom: 0.375rem;
+		margin-bottom: 0.6rem;
+		padding-bottom: 0.4rem;
 		border-bottom: 1px solid;
 	}
 
 	.toc-header h3 {
 		margin: 0;
-		font-size: 0.8rem;
+		font-size: 0.75rem;
 		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
@@ -132,7 +132,7 @@
 	}
 
 	.toc-item {
-		margin-bottom: 0.125rem;
+		margin-bottom: 0.15rem;
 	}
 
 	.toc-item.level-2 {
@@ -151,11 +151,11 @@
 		display: block;
 		width: 100%;
 		text-align: left;
-		padding: 0.25rem 0.375rem;
+		padding: 0.25rem 0.4rem;
 		border: none;
 		background: none;
 		border-radius: 0.25rem;
-		font-size: inherit;
+		font-size: 0.72rem;
 		line-height: 1.3;
 		cursor: pointer;
 		transition: all 0.2s ease;
@@ -163,6 +163,54 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
+	}
+
+	/* Color coding by heading level - same as document */
+	.level-2-link {
+		color: var(--c-green-700) !important;
+	}
+
+	.level-3-link {
+		color: var(--c-purple-700) !important;
+	}
+
+	.level-4-link {
+		color: var(--c-orange-700) !important;
+	}
+
+	/* Enhanced hover effects with level colors */
+	.level-2-link:hover {
+		background-color: color-mix(in srgb, var(--c-green-600) 15%, transparent) !important;
+		color: var(--c-green-600) !important;
+	}
+
+	.level-3-link:hover {
+		background-color: color-mix(in srgb, var(--c-purple-600) 15%, transparent) !important;
+		color: var(--c-purple-600) !important;
+	}
+
+	.level-4-link:hover {
+		background-color: color-mix(in srgb, var(--c-orange-600) 15%, transparent) !important;
+		color: var(--c-orange-600) !important;
+	}
+
+	/* Active state enhanced colors */
+	.toc-item.level-2.active .level-2-link {
+		background-color: color-mix(in srgb, var(--c-green-600) 20%, transparent) !important;
+		color: var(--c-green-600) !important;
+		font-weight: 600;
+	}
+
+	.toc-item.level-3.active .level-3-link {
+		background-color: color-mix(in srgb, var(--c-purple-600) 20%, transparent) !important;
+		color: var(--c-purple-600) !important;
+		font-weight: 600;
+	}
+
+	.toc-item.level-4.active .level-4-link {
+		background-color: color-mix(in srgb, var(--c-orange-600) 20%, transparent) !important;
+		color: var(--c-orange-600) !important;
+		font-weight: 600;
 	}
 
 	.toc-link:hover {
@@ -183,6 +231,51 @@
 		width: 2px;
 		height: 50%;
 		border-radius: 1px;
+	}
+
+	/* Active indicator colors by level */
+	.toc-item.level-2.active .toc-link::before {
+		background-color: var(--c-green-600);
+	}
+
+	.toc-item.level-3.active .toc-link::before {
+		background-color: var(--c-purple-600);
+	}
+
+	.toc-item.level-4.active .toc-link::before {
+		background-color: var(--c-orange-600);
+	}
+
+	/* Enhanced hover effects with level colors */
+	.toc-item.level-2 .toc-link:hover {
+		background-color: color-mix(in srgb, var(--c-green-600) 10%, transparent);
+		color: var(--c-green-600);
+	}
+
+	.toc-item.level-3 .toc-link:hover {
+		background-color: color-mix(in srgb, var(--c-purple-600) 10%, transparent);
+		color: var(--c-purple-600);
+	}
+
+	.toc-item.level-4 .toc-link:hover {
+		background-color: color-mix(in srgb, var(--c-orange-600) 10%, transparent);
+		color: var(--c-orange-600);
+	}
+
+	/* Active state enhanced colors */
+	.toc-item.level-2.active .toc-link {
+		background-color: color-mix(in srgb, var(--c-green-600) 15%, transparent);
+		color: var(--c-green-600);
+	}
+
+	.toc-item.level-3.active .toc-link {
+		background-color: color-mix(in srgb, var(--c-purple-600) 15%, transparent);
+		color: var(--c-purple-600);
+	}
+
+	.toc-item.level-4.active .toc-link {
+		background-color: color-mix(in srgb, var(--c-orange-600) 15%, transparent);
+		color: var(--c-orange-600);
 	}
 
 	/* Theme styles */

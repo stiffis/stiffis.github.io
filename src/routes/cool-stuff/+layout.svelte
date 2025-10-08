@@ -5,7 +5,7 @@
 	let { children } = $props();
 
 	// Check if we're in a specific cool-stuff project page (not the index)
-	const isProjectPage = $derived($page.url.pathname !== '/cool-stuff' && $page.url.pathname.startsWith('/cool-stuff/'));
+	let isProjectPage = $derived($page.url.pathname !== '/cool-stuff' && $page.url.pathname.startsWith('/cool-stuff/'));
 </script>
 
 <div class="cool-stuff-layout">
