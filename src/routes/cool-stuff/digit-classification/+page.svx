@@ -14,7 +14,7 @@ title: Digit Classification
 	<title>Digit Classification - Caffeine Overflow</title>
 	<meta
 		name="description"
-		content="Proyecto universitario para clasificar dígitos escritos usando Python y el dataset de Scikit-Learn."
+		content="A university project for classifying handwritten digits using Python and the Scikit-Learn dataset."
 	/>
 </svelte:head>
 
@@ -25,10 +25,10 @@ title: Digit Classification
 					<Fa icon={faSortNumericUp} class="text-teal-600 text-4xl mb-2" />
 Digit Classification
 		</p>
-		<h1 class="text-4xl font-bold text-gray-900"> Programación I: Proyecto Final (2024-1)</h1>
+		<h1 class="text-4xl font-bold text-gray-900">Programming I: Final Project (2024-1)</h1>
 		<p class="text-lg text-gray-600">
 			
-This is a 1st semester project at UTEC, it classifies a written digit. It uses the Digit DataSet from Scikit-Learn.
+			This is a first-semester project at UTEC that classifies handwritten digits using the Scikit-Learn Digit dataset.
 
 		</p>
 	</header>

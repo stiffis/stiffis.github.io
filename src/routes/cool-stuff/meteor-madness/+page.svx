@@ -14,111 +14,123 @@ title: Meteor Madness
 	<title>Meteor Madness - Caffeine Overflow</title>
 	<meta
 		name="description"
-		content="Prototipo inspirado en la NASA que combina astrofísica, simulaciones y narrativa interactiva."
+		content="A NASA-inspired educational prototype for simulating asteroid impacts, orbital trajectories, and environmental effects."
 	/>
 </svelte:head>
 
-<div class="max-w-4xl mx-auto px-4 py-12 space-y-10">
+<div class="mx-auto max-w-4xl space-y-10 px-4 py-12">
 	<header class="space-y-4 text-center">
-		<p class="inline-flex items-center gap-2 text-blue-800 font-semibold uppercase tracking-wide">
-			<img src="/images/nasa-logo.svg" alt="Logo de la NASA" class="h-10" />
+		<p class="inline-flex items-center gap-2 font-semibold uppercase tracking-wide text-blue-800">
+			<img src="/images/nasa-logo.svg" alt="NASA logo" class="h-10" />
 			Meteor Madness
 		</p>
-		<h1 class="text-4xl font-bold text-gray-900">Cazando meteoritos con ayuda de la NASA</h1>
+		<h1 class="text-4xl font-bold text-gray-900">Tracking Meteorites with NASA Data</h1>
 		<p class="text-lg text-gray-600">
-			Una experiencia inmersiva donde exploramos trayectorias orbitales, impactos y telemetría en tiempo real.
+			An immersive experience focused on orbital trajectories, asteroid impacts, and telemetry in real time.
 		</p>
 	</header>
 
-<div class="flex justify-center flex-wrap gap-2">
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
-  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js">
-  <img src="https://img.shields.io/badge/D3.js-F9A826?style=for-the-badge&logo=d3.js&logoColor=white" alt="D3.js">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License">
-</div>
-
+	<div class="flex flex-wrap justify-center gap-2">
+		<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+		<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+		<img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" />
+		<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+		<img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js" />
+		<img src="https://img.shields.io/badge/D3.js-F9A826?style=for-the-badge&logo=d3.js&logoColor=white" alt="D3.js" />
+		<img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="MIT license" />
+	</div>
 
 	<MarkdownCard>
 
-# Desarrollo de un Simulador de Impactos de Asteroides: Un Proyecto para el NASA Space Apps Challenge 2025
+# Developing an Asteroid Impact Simulator for NASA Space Apps Challenge 2025
 
-En este artículo, presento el **anteproyecto** para el reto *Meteor Madness* del **NASA Space Apps Challenge 2025**, en el cual propongo desarrollar una **herramienta web educativa** para simular el impacto de asteroides cercanos a la Tierra y evaluar sus consecuencias medioambientales. A lo largo de este proyecto, se busca integrar datos reales de **NASA** y **USGS**, visualizar los efectos de un impacto y explorar estrategias de mitigación de manera interactiva.
+This page presents the **proposal version** of *Meteor Madness*, a project created for the
+**NASA Space Apps Challenge 2025**. The idea is to build an **educational web tool** that simulates
+the impact of near-Earth asteroids and evaluates their environmental consequences using real data.
 
-## Enlaces Relevantes
-Aquí encontrarás enlaces tanto al paper como al repositorio oficiales del proyecto.
-<div class="flex justify-center flex-wrap gap-2">
-  <a href="https://github.com/stiffis/meteor-madness">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-  </a>
-  <a href="https://drive.google.com/file/d/1ONS11J5VxZOGDKFcBa9v2NHr3BCBCMbL/view?usp=drive_link">
-    <img src="https://img.shields.io/badge/Paper-000000?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Paper">
-  </a>
+## Relevant Links
+
+You can find both the project paper and the repository here:
+
+<div class="flex flex-wrap justify-center gap-2">
+	<a href="https://github.com/stiffis/meteor-madness">
+		<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub repository" />
+	</a>
+	<a href="https://drive.google.com/file/d/1ONS11J5VxZOGDKFcBa9v2NHr3BCBCMbL/view?usp=drive_link">
+		<img src="https://img.shields.io/badge/Paper-000000?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Project paper" />
+	</a>
 </div>
 
-## Motivación del Proyecto
+## Project Motivation
 
-El **riesgo de impactos de asteroides** es una amenaza poco discutida pero de gran impacto potencial. Aunque los impactos de grandes asteroides son eventos raros, los efectos destructivos podrían ser devastadores para la Tierra, incluyendo tsunamis, terremotos y alteraciones atmosféricas. La motivación detrás de este proyecto es crear una herramienta que permita visualizar estos riesgos de manera **interactiva** y **educativa**, sensibilizando tanto al público como a las autoridades sobre la importancia de **prepararse para tales eventos**.
+The **risk of asteroid impacts** is rarely discussed, yet its potential consequences are enormous.
+Although large impacts are uncommon, they could still trigger tsunamis, earthquakes, and
+atmospheric disruption. The goal of this project is to make those risks more visible through an
+**interactive** and **educational** experience that can inform both the public and decision-makers.
 
-## Objetivos del Proyecto
+## Project Goals
 
-### Objetivo General
+### General Goal
 
-Desarrollar una **herramienta web interactiva** que simule el impacto de asteroides cercanos a la Tierra, permitiendo a los usuarios visualizar las consecuencias medioambientales y explorar estrategias de mitigación utilizando **datos reales** de las APIs de *NASA* y *USGS*.
+Develop an **interactive web application** capable of simulating the impact of near-Earth asteroids,
+helping users understand environmental consequences and explore mitigation strategies using real
+data from **NASA** and **USGS** APIs.
 
-### Objetivos Específicos
+### Specific Goals
 
-1. **Simular la trayectoria de los asteroides** cercanos a la Tierra y visualizar sus posibles impactos.
-2. **Calcular los efectos medioambientales** del impacto, como la formación de cráteres, tsunamis y actividad sísmica.
-3. **Integrar datos de las APIs de *NASA* y *USGS*** para obtener información precisa sobre asteroides y sus efectos.
-4. **Proveer una interfaz interactiva** que permita a los usuarios modificar parámetros como tamaño, velocidad y ángulo de entrada del asteroide.
-5. **Incluir una sección educativa** que explique los fundamentos científicos detrás de los impactos de asteroides y las estrategias de mitigación.
+1. Simulate the trajectories of near-Earth asteroids and visualize potential impacts.
+2. Calculate environmental consequences such as craters, tsunamis, and seismic activity.
+3. Integrate **NASA** and **USGS** APIs for reliable scientific data.
+4. Provide an interactive interface where users can modify asteroid parameters such as size,
+	velocity, and entry angle.
+5. Include an educational layer that explains the science behind asteroid impacts and mitigation.
 
-## Metodología del Proyecto
+## Project Methodology
 
-### Enfoque del Proyecto
+### Development Approach
 
-El desarrollo del proyecto se llevará a cabo bajo un **enfoque ágil** e **iterativo**, lo que permitirá realizar ajustes rápidos y eficaces durante el proceso. El proyecto estará dividido en dos grandes fases: la **simulación de trayectorias** y la **visualización de los efectos del impacto**.
+The project follows an **agile** and **iterative** approach so the prototype can evolve quickly.
+The work is split into two major phases: **trajectory simulation** and **impact effect visualization**.
 
-- **Backend**: Utilizaremos **Flask** para el procesamiento de datos y la ejecución de las simulaciones de impacto, integrando las APIs de *NASA* y *USGS* para obtener datos relevantes de asteroides y efectos sísmicos.
-- **Frontend**: Se empleará **React** para crear la interfaz interactiva, y **Three.js** para la visualización 3D de la trayectoria del asteroide y los efectos del impacto. **D3.js** se utilizará para los gráficos 2D de las áreas afectadas por los tsunamis y terremotos.
-- **Interactividad**: Los usuarios podrán modificar parámetros del asteroide y observar los efectos de sus decisiones en tiempo real.
+- **Backend**: Flask processes asteroid data and runs impact simulations, integrating NASA and USGS APIs.
+- **Frontend**: React powers the interface, **Three.js** handles 3D visualization, and **D3.js** is used for 2D charts and affected-area views.
+- **Interactivity**: Users can change asteroid parameters and immediately observe the simulated results.
 
-### Desarrollo de la Simulación
+### Simulation Design
 
-El sistema calculará la **trayectoria orbital** del asteroide utilizando los parámetros orbitales proporcionados por la **API de *NASA NEO***. Además, se simularán los efectos del impacto (cráter, tsunamis, terremotos) basados en modelos científicos existentes. Estos cálculos se visualizarán en una interfaz interactiva y accesible para el público general.
+The system computes an asteroid's **orbital trajectory** using data from the **NASA NEO API**. It
+also simulates impact effects such as crater formation, tsunamis, and earthquakes using existing
+scientific models, all presented in an interface accessible to a general audience.
 
-## Resultados Esperados
+## Expected Results
 
-El objetivo es crear un **prototipo funcional** de la herramienta web que sea capaz de:
+The aim is to produce a **functional prototype** able to:
 
-- **Simular y visualizar** la trayectoria de un asteroide.
-- **Mostrar los efectos del impacto** en tiempo real, como la formación de cráteres, tsunamis y terremotos.
-- **Incluir una sección educativa** que permita a los usuarios aprender más sobre los impactos de asteroides y las estrategias de mitigación.
+- Simulate and visualize asteroid trajectories
+- Show impact effects in real time
+- Teach users about asteroid science and mitigation strategies
 
+## Interface Sketches
 
+The following mockups show how the interface was planned and how users would interact with the tool.
 
-## Bocetos de la Interfaz
+![Interface sketch 1]({linus})
+![Interface sketch 2]({img})
 
-A continuación, se muestran algunos **bocetos** de la interfaz de usuario, que ilustran cómo se organizarán las pantallas y cómo los usuarios interactuarán con la herramienta.
+### Progress
 
-![Boceto de la Interfaz]({linus})  
-![Boceto 2]({img})
+![Progress sketch 1]({img2})
+![Progress sketch 2]({img3})
 
-### Avances
+## Conclusions
 
-![Boceto 3]({img2})
-![Boceto 4]({img3})
+This project is not only technically interesting because it simulates asteroid impacts; it also has
+strong educational value. The tool is meant to help both scientists and the general public explore
+possible consequences and mitigation strategies. Over time, it could expand to cover more impact
+scenarios and more advanced asteroid deflection approaches.
 
-## Conclusiones
-
-Este proyecto no solo tiene un **impacto técnico** al permitir la simulación de impactos de asteroides, sino que también tiene un fuerte **enfoque educativo**. La herramienta permitirá que tanto científicos como el público general puedan visualizar las consecuencias de un impacto de asteroide y explorar las estrategias de mitigación posibles. A futuro, este proyecto podría expandirse para incluir más tipos de impactos y estrategias de desvío de asteroides.
-
-Este anteproyecto es solo el **primer paso** en la creación de una herramienta robusta para la **gestión de riesgos astronómicos**, y estoy emocionado por seguir avanzando y mejorando el simulador.
-
-
+This proposal is only the **first step** toward a more robust tool for **astronomical risk
+management**, but it already defines a clear direction for a compelling educational simulator.
 
 	</MarkdownCard>
 </div>

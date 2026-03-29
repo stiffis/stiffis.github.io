@@ -14,54 +14,55 @@ title: Hamming Code
 	/>
 </svelte:head>
 
-<div class="max-w-4xl mx-auto px-4 py-12 space-y-10">
+<div class="mx-auto max-w-4xl space-y-10 px-4 py-12">
 	<header class="space-y-4 text-center">
-		<p class="inline-flex items-center gap-2 text-green-600 font-semibold uppercase tracking-wide">
-			<img src="/images/err-corr.svg" alt="Hamming Code Logo" class="h-8" />
+		<p class="inline-flex items-center gap-2 font-semibold uppercase tracking-wide text-green-600">
+			<img src="/images/err-corr.svg" alt="Hamming Code logo" class="h-8" />
 			Hamming Code
 		</p>
 		<h1 class="text-4xl font-bold text-gray-900">Hamming Codes for Error Correction</h1>
 		<p class="text-lg text-gray-600">
-			Implementation of error detection and correction algorithms using Hamming codes
+			Implementation of error detection and correction algorithms using Hamming codes.
 		</p>
 	</header>
 
-
-
 	<MarkdownCard>
 
-## Descripción del Proyecto
+## Project Description
 
-Los códigos de Hamming son una familia de códigos de corrección de errores lineales que permiten la detección y corrección automática de errores de un solo bit en la transmisión de datos. Este proyecto implementa tanto la codificación como la decodificación de códigos de Hamming.
-### Características Principales
+Hamming codes are a family of linear error-correcting codes that allow automatic detection and
+correction of single-bit errors during data transmission. This project implements both Hamming
+encoding and decoding.
 
-- **Codificación Hamming**: Genera bits de paridad para proteger los datos
-- **Detección de Errores**: Identifica errores de 1 y 2 bits
-- **Corrección Automática**: Corrige errores de un solo bit automáticamente
-- **Visualización**: Muestra el proceso paso a paso de codificación y corrección
+### Main Features
 
-### Tecnologías Utilizadas
+- **Hamming encoding**: Generates parity bits to protect data.
+- **Error detection**: Identifies 1-bit and 2-bit errors.
+- **Automatic correction**: Corrects single-bit errors automatically.
+- **Visualization**: Shows the encoding and correction process step by step.
 
-- **Lenguaje**: C/C++
-- **Algoritmos**: Códigos de Hamming (7,4) y (15,11)
-- **Matemáticas**: Álgebra lineal sobre campos finitos
-- **Testing**: Casos de prueba exhaustivos con inyección de errores
+### Technologies Used
+
+- **Language**: C/C++
+- **Algorithms**: Hamming (7,4) and Hamming (15,11)
+- **Mathematics**: Linear algebra over finite fields
+- **Testing**: Exhaustive test cases with error injection
 
 ## How It Works
 
 ### Encoding Process
 
-1. **Data Input**: Information bits to be transmitted are received
-2. **Parity Calculation**: Parity bits are generated using XOR operations
-3. **Insertion**: Parity bits are inserted at specific positions (powers of 2)
-4. **Output**: The codeword ready for transmission is obtained
+1. **Data input**: The information bits to be transmitted are received.
+2. **Parity calculation**: Parity bits are generated using XOR operations.
+3. **Insertion**: Parity bits are inserted at specific positions (powers of two).
+4. **Output**: The final codeword is produced for transmission.
 
 ### Correction Process
 
-1. **Reception**: The codeword is received (possibly with errors)
-2. **Syndrome**: Error syndrome is calculated using parity bits
-3. **Localization**: The syndrome indicates the error position (if any)
-4. **Correction**: The erroneous bit is corrected and original data is extracted
+1. **Reception**: The codeword is received, possibly with errors.
+2. **Syndrome calculation**: The error syndrome is computed using the parity bits.
+3. **Localization**: The syndrome indicates the error position, if one exists.
+4. **Correction**: The faulty bit is corrected and the original data is extracted.
 
 ## Implementation
 
@@ -85,46 +86,49 @@ void correct_error(int* received, int error_position);
 
 ### Correction Algorithm
 
-The algorithm uses the error syndrome to determine the position of the erroneous bit:
+The algorithm uses the error syndrome to determine the position of the faulty bit:
 
-- **Syndrome = 0**: No errors
-- **Syndrome > 0**: Error position equals syndrome value
-- **Double error**: Detected but not correctable
+- **Syndrome = 0**: No errors.
+- **Syndrome > 0**: The error position matches the syndrome value.
+- **Double error**: Detected, but not correctable.
 
 ## Results and Analysis
 
 ### Correction Capability
 
-- ✅ **1-bit errors**: 100% effective detection and correction
-- ✅ **2-bit errors**: Reliable detection (not correctable)
-- ❌ **3+ bit errors**: May go undetected
+- **1-bit errors**: 100% effective detection and correction
+- **2-bit errors**: Reliable detection, but not correction
+- **3+ bit errors**: May go undetected
 
 ### Efficiency
 
 - **Code (7,4)**: 4 data bits + 3 parity bits = 57% efficiency
 - **Code (15,11)**: 11 data bits + 4 parity bits = 73% efficiency
-- **Overhead**: Decreases logarithmically with block size
+- **Overhead**: Decreases logarithmically as the block size grows
 
 ## Practical Applications
 
 Hamming codes are used in:
 
-- **RAM Memory**: ECC (Error Correcting Code) correction
-- **Storage**: Hard drives and SSDs
+- **RAM memory**: ECC correction
+- **Storage systems**: Hard drives and SSDs
 - **Communications**: Reliable data transmission
-- **Embedded Systems**: Protection against interference
+- **Embedded systems**: Protection against interference
 
 ## Conclusions
 
-This project demonstrates the mathematical elegance of Hamming codes and their practical importance in modern digital systems. The ability to automatically detect and correct errors is fundamental to the reliability of computing systems.
+This project highlights both the mathematical elegance of Hamming codes and their practical value
+in modern digital systems. The ability to automatically detect and correct errors is fundamental
+to the reliability of computing systems.
 
 ### Key Learnings
 
-- Deep understanding of error-correcting code theory
-- Efficient implementation of correction algorithms
-- Analysis of trade-offs between redundancy and reliability
-- Practical application of abstract mathematical concepts
+<ul>
+	<li>Deeper understanding of error-correcting code theory</li>
+	<li>Efficient implementation of correction algorithms</li>
+	<li>Better analysis of the trade-off between redundancy and reliability</li>
+	<li>Practical use of abstract mathematical concepts</li>
+</ul>
 
-ty:3
 	</MarkdownCard>
 </div>

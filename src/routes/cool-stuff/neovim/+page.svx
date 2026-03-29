@@ -15,7 +15,7 @@ title: Neovim
 	<title>Neovim Config - Caffeine Overflow</title>
 	<meta
 		name="description"
-		content="Mi configuración modular de Neovim basada en AstroNvim v5, con LSP, Tree-sitter, formato automático y plugins cargados en lazy mode."
+		content="My modular Neovim configuration built on AstroNvim v5, with LSP, Tree-sitter, automatic formatting, and lazy-loaded plugins."
 	/>
 </svelte:head>
 
