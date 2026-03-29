@@ -33,7 +33,9 @@ theme.subscribe((value) => {
 	try {
 		localStorage.setItem(storageKey, value);
 		document.documentElement.setAttribute('data-theme', value);
-	} catch {}
+	} catch (error) {
+		console.warn('Failed to persist the selected theme.', error);
+	}
 });
 
 export function nextTheme() {

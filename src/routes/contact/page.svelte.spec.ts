@@ -7,31 +7,25 @@ describe('/contact/+page.svelte', () => {
 	it('should render contact title', async () => {
 		render(ContactPage);
 
-		const heading = page.getByRole('heading', { level: 1, name: 'Contacto' });
+		const heading = page.getByRole('heading', { level: 1, name: 'Contact' });
 		await expect.element(heading).toBeInTheDocument();
 	});
 
-	it('should render contact form', async () => {
+	it('should render contact information sections', async () => {
 		render(ContactPage);
 
-		const nameInput = page.getByLabelText('Nombre *');
-		const emailInput = page.getByLabelText('Email *');
-		const subjectInput = page.getByLabelText('Asunto *');
-		const messageInput = page.getByLabelText('Mensaje *');
-		const submitButton = page.getByRole('button', { name: 'Enviar Mensaje' });
+		const contactInfoHeading = page.getByRole('heading', { level: 2, name: 'Contact Information' });
+		const socialHeading = page.getByRole('heading', { level: 3, name: 'Follow me on' });
 
-		await expect.element(nameInput).toBeInTheDocument();
-		await expect.element(emailInput).toBeInTheDocument();
-		await expect.element(subjectInput).toBeInTheDocument();
-		await expect.element(messageInput).toBeInTheDocument();
-		await expect.element(submitButton).toBeInTheDocument();
+		await expect.element(contactInfoHeading).toBeInTheDocument();
+		await expect.element(socialHeading).toBeInTheDocument();
 	});
 
 	it('should render contact information', async () => {
 		render(ContactPage);
 
 		const emailInfo = page.getByText('steve.ildefonso@utec.edu.pe');
-		const locationInfo = page.getByText('Lima, Perú');
+		const locationInfo = page.getByText('Lima, Peru');
 
 		await expect.element(emailInfo).toBeInTheDocument();
 		await expect.element(locationInfo).toBeInTheDocument();
@@ -40,7 +34,12 @@ describe('/contact/+page.svelte', () => {
 	it('should have social media links', async () => {
 		render(ContactPage);
 
-		const githubLink = page.getByRole('link', { name: /github/i });
+		const githubLink = page.getByRole('link', { name: 'GitHub profile' });
+		const linkedInLink = page.getByRole('link', { name: 'LinkedIn profile' });
+		const xLink = page.getByRole('link', { name: 'X profile' });
+
 		await expect.element(githubLink).toBeInTheDocument();
+		await expect.element(linkedInLink).toBeInTheDocument();
+		await expect.element(xLink).toBeInTheDocument();
 	});
 });

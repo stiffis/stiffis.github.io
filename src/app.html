@@ -8,7 +8,8 @@
 			try {
 				const key = 'theme';
 				const saved = localStorage.getItem(key);
-				const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+				const prefersDark =
+					window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 				const fallback = prefersDark ? 'catppuccin-mocha' : 'catppuccin-latte';
 				document.documentElement.setAttribute('data-theme', saved || fallback);
 			} catch {}

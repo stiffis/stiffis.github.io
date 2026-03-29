@@ -9,7 +9,9 @@
 
 	// Extract headings from the document
 	function extractHeadings() {
-		const headings = document.querySelectorAll('.markdown-card h2, .markdown-card h3, .markdown-card h4');
+		const headings = document.querySelectorAll(
+			'.markdown-card h2, .markdown-card h3, .markdown-card h4'
+		);
 		tocItems = Array.from(headings).map((heading) => ({
 			id: heading.id,
 			text: heading.textContent?.replace(/^▶\s*/, '') || '',
@@ -20,7 +22,9 @@
 
 	// Update active heading based on scroll position
 	function updateActiveHeading() {
-		const headings = document.querySelectorAll('.markdown-card h2, .markdown-card h3, .markdown-card h4');
+		const headings = document.querySelectorAll(
+			'.markdown-card h2, .markdown-card h3, .markdown-card h4'
+		);
 		const scrollPosition = window.scrollY + 100;
 
 		let current = '';
@@ -45,10 +49,10 @@
 	onMount(() => {
 		extractHeadings();
 		updateActiveHeading();
-		
+
 		const handleScroll = () => updateActiveHeading();
 		window.addEventListener('scroll', handleScroll);
-		
+
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
@@ -62,8 +66,8 @@
 </script>
 
 {#if isVisible}
-	<nav 
-		class="table-of-contents theme-{currentTheme}" 
+	<nav
+		class="table-of-contents theme-{currentTheme}"
 		bind:this={tocContainer}
 		aria-label="Table of Contents"
 	>
@@ -71,9 +75,9 @@
 			<h3>Contents</h3>
 		</div>
 		<ul class="toc-list">
-			{#each tocItems as item}
+			{#each tocItems as item (item.id)}
 				<li class="toc-item level-{item.level}" class:active={activeId === item.id}>
-					<button 
+					<button
 						class="toc-link level-{item.level}-link"
 						onclick={() => scrollToHeading(item.id)}
 						title="Go to {item.text}"
@@ -101,7 +105,9 @@
 		padding: 0.5rem;
 		font-size: 0.7rem;
 		transition: all 0.3s ease;
-		box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.1), 0 4px 8px -4px rgba(0, 0, 0, 0.08);
+		box-shadow:
+			0 6px 20px -4px rgba(0, 0, 0, 0.1),
+			0 4px 8px -4px rgba(0, 0, 0, 0.08);
 	}
 
 	/* Hide on mobile and smaller tablets */

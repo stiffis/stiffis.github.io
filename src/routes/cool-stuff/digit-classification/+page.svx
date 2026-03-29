@@ -11,10 +11,10 @@ title: Digit Classification
 </script>
 
 <svelte:head>
-	<title>Meteor Madness - Caffeine Overflow</title>
+	<title>Digit Classification - Caffeine Overflow</title>
 	<meta
 		name="description"
-		content="Prototipo inspirado en la NASA que combina astrofísica, simulaciones y narrativa interactiva."
+		content="Proyecto universitario para clasificar dígitos escritos usando Python y el dataset de Scikit-Learn."
 	/>
 </svelte:head>
 
@@ -34,15 +34,19 @@ This is a 1st semester project at UTEC, it classifies a written digit. It uses t
 	</header>
 
 <div class="flex justify-center flex-wrap gap-2">
-<br>
-<img src="https://img.shields.io/badge/os-linux-brightgreen">
-<img src="https://img.shields.io/badge/os-mac-brightgreen">
-<img src="https://img.shields.io/badge/os-windows-yellowgreen">
-<br>
+	<img src="https://img.shields.io/badge/os-linux-brightgreen" alt="Linux support badge" />
+	<img src="https://img.shields.io/badge/os-mac-brightgreen" alt="macOS support badge" />
+	<img src="https://img.shields.io/badge/os-windows-yellowgreen" alt="Windows support badge" />
 </div>
 
 <div class="flex justify-center flex-wrap gap-2">
-<a href="https://github.com/stiffis"><img src="https://img.shields.io/badge/maintainer-stiffis-blue"></a>
+	<a
+		href="https://github.com/stiffis"
+		aria-label="Maintainer stiffis on GitHub"
+		title="Maintainer stiffis on GitHub"
+	>
+		<img src="https://img.shields.io/badge/maintainer-stiffis-blue" alt="Maintainer stiffis badge" />
+	</a>
 
 </div>
 

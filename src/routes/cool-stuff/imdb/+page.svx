@@ -9,24 +9,20 @@ title: Meteor Madness
 	import {
 		faBook,
 		faFilm,
-		faProjectDiagram,
-		faCode,
 		faFileCode,
 		faTerminal,
-		faTable,
 		faBrain,
 		faUsers,
-		faGraduationCap,
 		faTableCells,
 		faSortNumericUp
 	} from '@fortawesome/free-solid-svg-icons';
 </script>
 
 <svelte:head>
-	<title>Meteor Madness - Caffeine Overflow</title>
+	<title>IMDb-- - Caffeine Overflow</title>
 	<meta
 		name="description"
-		content="Prototipo inspirado en la NASA que combina astrofísica, simulaciones y narrativa interactiva."
+		content="Proyecto universitario de un CLI para buscar películas, sinopsis y géneros."
 	/>
 </svelte:head>
 
@@ -45,26 +41,29 @@ Un CLI para buscar películas, así como sus respectivas sinopsis y géneros
 	</header>
 
 <div class="flex justify-center flex-wrap gap-2">
-<br>
-<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg">
-<img src="https://img.shields.io/badge/os-linux-brightgreen">
-<img src="https://img.shields.io/badge/os-mac-brightgreen">
-<img src="https://img.shields.io/badge/os-windows-yellowgreen">
-<br>
+	<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome badge" />
+	<img src="https://img.shields.io/badge/os-linux-brightgreen" alt="Linux support badge" />
+	<img src="https://img.shields.io/badge/os-mac-brightgreen" alt="macOS support badge" />
+	<img src="https://img.shields.io/badge/os-windows-yellowgreen" alt="Windows support badge" />
 </div>
 
 <div class="flex justify-center flex-wrap gap-2">
-<a href="https://github.com/AntoMGB1"><img src="https://img.shields.io/badge/lead-marco-lightblue"></a>
-<a href="https://github.com/stiffis"><img src="https://img.shields.io/badge/maintainer-stiffis-blue"></a>
-<a href="https://github.com/Vasco2510"><img src="https://img.shields.io/badge/maintainer-abel-blue"></a>
+	<a href="https://github.com/AntoMGB1" aria-label="Lead marco on GitHub" title="Lead marco on GitHub">
+		<img src="https://img.shields.io/badge/lead-marco-lightblue" alt="Lead marco badge" />
+	</a>
+	<a href="https://github.com/stiffis" aria-label="Maintainer stiffis on GitHub" title="Maintainer stiffis on GitHub">
+		<img src="https://img.shields.io/badge/maintainer-stiffis-blue" alt="Maintainer stiffis badge" />
+	</a>
+	<a href="https://github.com/Vasco2510" aria-label="Maintainer abel on GitHub" title="Maintainer abel on GitHub">
+		<img src="https://img.shields.io/badge/maintainer-abel-blue" alt="Maintainer abel badge" />
+	</a>
 </div>
 
 
 	<MarkdownCard>
 
-<div align=center>
-<h1 align="center">
-<img src="{logo}">
+<div align="center">
+	<img src={logo} alt="IMDb-- logo" />
 </div>
 
 ---
@@ -361,7 +360,10 @@ Se utilizaron varias herramientas para el desarrollo del proyecto, incluyendo:
 Este proyecto está bajo la licencia MIT. Para más información, revisa el archivo `LICENSE`.
 
 ---
-<p align="center">Copyright &copy; 2025-present <a href="https://github.com/stiffis/imdb--" target="_blank">IMDb-- Org</a>
+<p align="center">
+	Copyright &copy; 2025-present
+	<a href="https://github.com/stiffis/imdb--" target="_blank" rel="noopener noreferrer">IMDb-- Org</a>
+</p>
 
 ⠀ ／l         
 （ﾟ､ ｡ ７       

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { resolve } from '$app/paths';
 
-	let posts = [
+	const posts = [
 		{
 			id: 1,
 			title: 'Mastering C Pointers',
@@ -35,7 +35,16 @@
 			slug: 'a-guide-to-webassembly',
 			hashtags: ['#webassembly', '#wasm', '#webdev', '#performance']
 		}
-	];
+	] as const;
+
+	function formatPostDate(date: string) {
+		return new Intl.DateTimeFormat('en-US', {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric',
+			timeZone: 'UTC'
+		}).format(new Date(`${date}T00:00:00Z`));
+	}
 </script>
 
 <svelte:head>
@@ -43,34 +52,30 @@
 	<meta name="description" content="Personal blog with articles about development and technology" />
 </svelte:head>
 
-<div class="max-w-4xl mx-auto px-4 py-8">
+<div class="mx-auto max-w-4xl px-4 py-8">
 	<header class="mb-12 text-center">
-		<h1 class="text-4xl font-bold text-gray-900 mb-4">Blog</h1>
+		<h1 class="mb-4 text-4xl font-bold text-gray-900">Blog</h1>
 		<p class="text-lg text-gray-600">Articles about development, technology, and more</p>
 	</header>
 	<div class="space-y-8">
 		<!-- Blog Post List -->
-		{#each posts as post}
-			<article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+		{#each posts as post (post.slug)}
+			<article class="rounded-lg bg-white p-6 shadow-md transition-shadow hover:shadow-lg">
 				<header class="mb-4">
-					<h2 class="text-2xl font-semibold text-gray-900 mb-2">
-						<a href="/blog/{post.slug}" class="hover:text-blue-600 transition-colors">
+					<h2 class="mb-2 text-2xl font-semibold text-gray-900">
+						<a href={resolve(`/blog/${post.slug}`)} class="transition-colors hover:text-blue-600">
 							{post.title}
 						</a>
 					</h2>
 					<time class="text-sm text-gray-500" datetime={post.date}>
-						{new Date(post.date).toLocaleDateString('en-US', {
-							year: 'numeric',
-							month: 'long',
-							day: 'numeric'
-						})}
+						{formatPostDate(post.date)}
 					</time>
 				</header>
-				<p class="text-gray-700 mb-4">{post.excerpt}</p>
+				<p class="mb-4 text-gray-700">{post.excerpt}</p>
 				<div class="mt-4">
-					{#each post.hashtags as hashtag}
+					{#each post.hashtags as hashtag (hashtag)}
 						<span
-							class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+							class="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700"
 							>{hashtag}</span
 						>
 					{/each}
@@ -79,4 +84,3 @@
 		{/each}
 	</div>
 </div>
-

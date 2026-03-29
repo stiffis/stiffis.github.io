@@ -6,34 +6,44 @@
 
 <svelte:head>
 	<title>Contact - Caffeine Overflow</title>
-	<meta name="description" content="Get in touch with me for projects, collaborations, or inquiries" />
+	<meta
+		name="description"
+		content="Get in touch with me for projects, collaborations, or inquiries"
+	/>
 </svelte:head>
 
-<div class="max-w-4xl mx-auto px-4 py-8">
+<div class="mx-auto max-w-4xl px-4 py-8">
 	<header class="mb-12 text-center">
-		<h1 class="text-4xl font-bold text-gray-900 mb-4">Contact</h1>
+		<h1 class="mb-4 text-4xl font-bold text-gray-900">Contact</h1>
 		<p class="text-lg text-gray-600">I'd love to hear from you!</p>
 	</header>
 
 	<div class="space-y-8">
 		<!-- Contact Information -->
 		<div>
-			<h2 class="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h2>
+			<h2 class="mb-6 text-2xl font-semibold text-gray-900">Contact Information</h2>
 			<div class="space-y-4">
 				<div class="flex items-center">
-					<div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+					<div
+						class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-blue-100"
+					>
 						<Fa icon={faEnvelope} class="text-blue-600" />
 					</div>
 					<div class="ml-4">
 						<p class="text-sm font-medium text-gray-900">Email</p>
-						<a href="mailto:steve.ildefonso@utec.edu.pe" class="text-gray-600 hover:text-blue-600 transition-colors">
+						<a
+							href="mailto:steve.ildefonso@utec.edu.pe"
+							class="text-gray-600 transition-colors hover:text-blue-600"
+						>
 							steve.ildefonso@utec.edu.pe
 						</a>
 					</div>
 				</div>
 
 				<div class="flex items-center">
-					<div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+					<div
+						class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-green-100"
+					>
 						<Fa icon={faMapMarkerAlt} class="text-green-600" />
 					</div>
 					<div class="ml-4">
@@ -46,34 +56,39 @@
 
 		<!-- Social Media -->
 		<div>
-			<h3 class="text-2xl font-semibold text-gray-900 mb-6">Follow me on</h3>
+			<h3 class="mb-6 text-2xl font-semibold text-gray-900">Follow me on</h3>
 			<div class="flex space-x-4">
 				<a
 					href="https://github.com/stiffis"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="w-12 h-12 bg-gray-900 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors"
+					aria-label="GitHub profile"
+					title="GitHub profile"
+					class="flex h-12 w-12 items-center justify-center rounded-lg bg-gray-900 transition-colors hover:bg-gray-700"
 				>
-					<Fa icon={faGithub} class="text-white text-xl" />
+					<Fa icon={faGithub} class="text-xl text-white" />
 				</a>
 				<a
 					href="https://www.linkedin.com/in/steve-andy-ildefonso-santos-936106323/"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-colors"
+					aria-label="LinkedIn profile"
+					title="LinkedIn profile"
+					class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 transition-colors hover:bg-blue-700"
 				>
-					<Fa icon={faLinkedin} class="text-white text-xl" />
+					<Fa icon={faLinkedin} class="text-xl text-white" />
 				</a>
 				<a
 					href="https://x.com/Stiff_GLive"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="w-12 h-12 bg-blue-400 hover:bg-blue-500 rounded-lg flex items-center justify-center transition-colors"
+					aria-label="X profile"
+					title="X profile"
+					class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-400 transition-colors hover:bg-blue-500"
 				>
-					<Fa icon={faTwitter} class="text-white text-xl" />
+					<Fa icon={faTwitter} class="text-xl text-white" />
 				</a>
 			</div>
 		</div>
-
 	</div>
 </div>
