@@ -1,0 +1,220 @@
+---
+title: Neovim
+---
+
+<script>
+	import MarkdownCard from '$lib/components/MarkdownCard.svelte';
+	import { Fa } from 'svelte-fa';
+	import { faTerminal } from '@fortawesome/free-solid-svg-icons';
+
+	const repoUrl = 'https://github.com/stiffis/neovim-config';
+	const rawBase = 'https://raw.githubusercontent.com/stiffis/neovim-config/main/screenshots';
+</script>
+
+<svelte:head>
+	<title>Neovim Config - Caffeine Overflow</title>
+	<meta
+		name="description"
+		content="Mi configuración modular de Neovim basada en AstroNvim v5, con LSP, Tree-sitter, formato automático y plugins cargados en lazy mode."
+	/>
+</svelte:head>
+
+<div class="mx-auto max-w-4xl space-y-10 px-4 py-12">
+	<header class="space-y-4 text-center">
+		<p class="inline-flex items-center gap-2 font-semibold uppercase tracking-wide text-green-600">
+			<Fa icon={faTerminal} class="mb-2 text-4xl text-green-600" />
+			Neovim
+		</p>
+		<h1 class="text-4xl font-bold text-gray-900">My Neovim Configuration</h1>
+		<p class="mx-auto max-w-3xl text-lg text-gray-600">
+			A modular Neovim setup built on top of AstroNvim v5, tuned for fast startup,
+			language tooling, and a clean daily coding workflow.
+		</p>
+	</header>
+
+	<div class="flex flex-wrap justify-center gap-2">
+		<a href="https://neovim.io" aria-label="Neovim website" title="Neovim website">
+			<img
+				src="https://img.shields.io/badge/Neovim-0.11+-blueviolet.svg?style=flat-square&logo=Neovim&logoColor=white"
+				alt="Neovim 0.11+ badge"
+			/>
+		</a>
+		<a href="https://github.com/AstroNvim/AstroNvim" aria-label="AstroNvim website" title="AstroNvim website">
+			<img
+				src="https://img.shields.io/badge/AstroNvim-v5-orange?style=flat-square"
+				alt="AstroNvim v5 badge"
+			/>
+		</a>
+		<a href={repoUrl} aria-label="neovim-config repository" title="neovim-config repository">
+			<img
+				src="https://img.shields.io/badge/Made%20with-Lua-2C2D72.svg?style=flat-square&logo=lua&logoColor=white"
+				alt="Made with Lua badge"
+			/>
+		</a>
+	</div>
+
+	<MarkdownCard>
+
+## Overview
+
+This config lives in <a href={repoUrl}>stiffis/neovim-config</a> and is one of the tools I use the most every day.
+It is built around **AstroNvim v5** and extends it with my own plugin choices, custom highlights,
+language tooling, and workflow improvements for writing code, notes, and technical documents.
+
+## What it focuses on
+
+- **Fast startup** through lazy-loaded plugins
+- **Comfortable editing** with a polished UI and solid defaults
+- **Strong language tooling** via LSP, Treesitter, Mason, and Conform
+- **Daily workflow support** for Go, Python, C/C++, TypeScript, Java, LaTeX, and Typst
+- **Practical extras** like debugging, collaborative editing, markdown rendering, and deadline tracking
+
+## Main features
+
+- **70+ plugins** selected around real daily use rather than plugin count
+- **Kanagawa** as the main theme, with **Catppuccin** available as an alternative
+- **blink.cmp** for autocompletion with LSP integration
+- **Conform.nvim** for format-on-save workflows
+- **nvim-treesitter** for syntax-aware highlighting and editing
+- **nvim-dap** for debugging sessions
+- **vimtex** and **typst.vim + tinymist** for document workflows
+- **live-share.nvim** for collaborative editing
+- A custom **timelimit** plugin for project deadline tracking
+
+## Tooling and language support
+
+The README lists support or ready-to-configure flows for:
+
+- Go
+- Python
+- C / C++
+- TypeScript
+- Java
+- LaTeX
+- Typst
+
+That makes this config useful not only for app development, but also for coursework,
+technical writing, and systems programming.
+
+## Core plugin stack
+
+### Base framework
+
+- **AstroNvim**
+- **lazy.nvim**
+
+### Completion and editing
+
+- **blink.cmp**
+- **LuaSnip**
+
+### LSP and formatting
+
+- **mason.nvim**
+- **nvim-lspconfig**
+- **conform.nvim**
+- **nvim-treesitter**
+
+### Language-specific workflow
+
+- **vimtex** for LaTeX with live preview
+- **typst.vim** + **tinymist** for Typst editing, formatting, diagnostics, and preview
+- **nvim-java** for Java support
+- **tailwind-tools.nvim** and **tailwindcss-colorizer-cmp** for Tailwind work
+
+## Installation
+
+```bash
+mv ~/.config/nvim ~/.config/nvim.bak
+mv ~/.local/share/nvim ~/.local/share/nvim.bak
+mv ~/.local/state/nvim ~/.local/state/nvim.bak
+mv ~/.cache/nvim ~/.cache/nvim.bak
+
+git clone https://github.com/stiffis/neovim-config ~/.config/nvim
+cd ~/.config/nvim
+nvim
+```
+
+On first launch, Lazy.nvim installs the plugin set automatically.
+
+## Requirements
+
+- Neovim >= 0.10.0 (0.11+ recommended)
+- Git >= 2.19
+- Node.js >= 18
+- Python >= 3.10
+- A Nerd Font
+- ripgrep
+- Optional tools like `lazygit`, `zathura`, and `typst`
+
+## Notable workflows
+
+### Coding
+
+This setup is designed to make normal development feel smooth: completion, formatting,
+LSP navigation, diagnostics, Treesitter, and a UI that stays readable over long sessions.
+
+### LaTeX and Typst
+
+One of the strongest parts of the config is document work:
+
+- LaTeX with **VimTeX + Zathura**
+- Typst with **browser preview**, sync support, diagnostics, and formatting
+
+That makes it especially useful for class notes, reports, and technical writeups.
+
+### Debugging and collaboration
+
+- DAP support for debugging sessions
+- live-share support for collaborative editing
+- custom deadline tracking through `timelimit.nvim`
+
+## Project structure
+
+```text
+~/.config/nvim/
+├── init.lua
+├── lua/
+│   ├── lazy_setup.lua
+│   ├── polish.lua
+│   ├── community.lua
+│   └── plugins/
+├── .stylua.toml
+└── README.md
+```
+
+## Screenshots
+
+<div class="grid gap-8 md:grid-cols-2">
+	<figure class="space-y-3">
+		<img src={`${rawBase}/dashboard.png`} alt="Neovim dashboard screenshot" />
+		<figcaption>Dashboard and startup screen.</figcaption>
+	</figure>
+	<figure class="space-y-3">
+		<img src={`${rawBase}/coding.png`} alt="Neovim coding screenshot" />
+		<figcaption>Daily coding setup with completion and syntax tooling.</figcaption>
+	</figure>
+	<figure class="space-y-3">
+		<img src={`${rawBase}/debug-dap.png`} alt="Neovim debugging screenshot" />
+		<figcaption>Debugging session using DAP integration.</figcaption>
+	</figure>
+	<figure class="space-y-3">
+		<img src={`${rawBase}/latex-zathura.png`} alt="Neovim LaTeX preview screenshot" />
+		<figcaption>LaTeX workflow with live PDF preview.</figcaption>
+	</figure>
+	<figure class="space-y-3 md:col-span-2">
+		<img src={`${rawBase}/typst-preview.png`} alt="Neovim Typst preview screenshot" />
+		<figcaption>Typst preview workflow with browser sync.</figcaption>
+	</figure>
+</div>
+
+## Links
+
+<ul>
+	<li><a href={repoUrl}>Repository</a></li>
+	<li><a href="https://github.com/AstroNvim/AstroNvim">AstroNvim</a></li>
+	<li><a href="https://neovim.io">Neovim</a></li>
+</ul>
+
+</MarkdownCard>
+</div>
