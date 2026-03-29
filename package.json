@@ -5,10 +5,10 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
-	"homepage": "https://stiff.github.io/",
+	"homepage": "https://stiffis.github.io/",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/stiffis/stiff.github.io"
+		"url": "https://github.com/stiffis/stiffis.github.io"
 	},
 	"scripts": {
 		"dev": "vite dev",
