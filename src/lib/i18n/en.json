@@ -1,0 +1,47 @@
+{
+	"nav": {
+		"blog": "Blog",
+		"coolStuff": "Cool Stuff",
+		"contact": "Contact"
+	},
+	"home": {
+		"welcome": "Welcome to my digital garden",
+		"subtitle": "Halloooo, this is my personal space, where I'll write about some experiences, both personal and academic.",
+		"readBlog": "Read Blog",
+		"contact": "Contact"
+	},
+	"blog": {
+		"title": "Blog",
+		"searchPlaceholder": "Search posts...",
+		"allTags": "All tags",
+		"noResults": "No posts match your current search and tag filters."
+	},
+	"coolStuff": {
+		"title": "Cool Stuff",
+		"subtitle": "Projects, tools, and cool stuff I want to share",
+		"sections": {
+			"university": "UNIVERSITY",
+			"configs": "CONFIGS",
+			"projects": "PROJECTS",
+			"research": "RESEARCH"
+		}
+	},
+	"contact": {
+		"title": "Contact",
+		"infoTitle": "Contact Information",
+		"email": "Email",
+		"location": "Location",
+		"followMe": "Follow me on"
+	},
+	"toc": {
+		"title": "Contents"
+	},
+	"theme": {
+		"toggle": "Toggle theme"
+	},
+	"language": {
+		"select": "Select language",
+		"en": "English",
+		"es": "Español"
+	}
+}

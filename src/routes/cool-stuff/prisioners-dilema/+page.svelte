@@ -1,0 +1,263 @@
+<script>
+	import MarkdownRenderer from '$lib/components/MarkdownRenderer.svelte';
+	import { Fa } from 'svelte-fa';
+	import { faUsers } from '@fortawesome/free-solid-svg-icons';
+	import { language } from '$lib/i18n';
+	import output from './output.png';
+
+	const content = {
+		en: {
+			title: 'Implementing the Prisoner\'s Dilemma in Python',
+			excerpt: 'A game theory simulation that explores why rational individuals may fail to cooperate, even when cooperation looks like the best outcome for everyone.',
+			body: `Published on _December 10, 2024_
+
+The **Prisoner's Dilemma** is a classic problem in game theory. It shows how individual decisions, made in pursuit of self-interest, can lead to outcomes that are harmful for all parties involved. It has psychological, philosophical, and technological implications, which is why this project looks at the dilemma from multiple angles.
+
+The dilemma was originally formulated by **Merrill Flood** and **Melvin Dresher** at the RAND Corporation during the Cold War era, and **Albert W. Tucker** later gave it the standard narrative form that is still used today.
+
+#### Narrative Setup
+
+Two criminals are arrested and placed in separate cells, unable to communicate with each other. Each prisoner has two options: **betray** the other prisoner or **cooperate** by staying silent. Depending on the combination of choices, both receive different sentences.
+
+<table border="1">
+<tbody>
+  <tr>
+    <td>(2), (1)</td>
+    <td>Betrayal</td>
+    <td>Cooperation</td>
+  </tr>
+  <tr>
+    <td>Betrayal</td>
+    <td>Medium sentence for both</td>
+    <td>(1) long sentence, (2) goes free</td>
+  </tr>
+  <tr>
+    <td>Cooperation</td>
+    <td>(2) sentenced, (1) goes free</td>
+    <td>Light sentence for both</td>
+  </tr>
+</tbody>
+</table>
+
+To make the scenario easier to simulate, the punishment model can be converted into numeric rewards and extended over multiple iterations.
+
+In the adapted version, a banker with a chest of gold coins invites two people to play a game. There is still no communication between them, but the available choices become **cooperate** and **do not cooperate**. The winner is determined by the number of coins received.
+
+<table border="1">
+<tbody>
+  <tr>
+    <td>(2), (1)</td>
+    <td>Do not cooperate</td>
+    <td>Cooperate</td>
+  </tr>
+  <tr>
+    <td>Do not cooperate</td>
+    <td>One coin each</td>
+    <td>The non-cooperating player gets 5 coins</td>
+  </tr>
+  <tr>
+    <td>Cooperate</td>
+    <td>The non-cooperating player gets 5 coins</td>
+    <td>3 coins each</td>
+  </tr>
+</tbody>
+</table>
+
+In a single-round version, betrayal is trivially the best option because it always provides an equal or better payoff than cooperation. When both players recognize that betrayal dominates and act on it, the situation reaches what is known as a **Nash equilibrium**, since there is no incentive to change strategy unilaterally.
+
+However, real life rarely works like a one-shot game. Relationships, workplaces, markets, politics, and even ecosystems often involve repeated interactions. In those settings, the key question becomes: **which strategy performs best over time?**
+
+Robert Axelrod organized an international tournament in the 1980s to study repeated-game strategies. Participants submitted algorithms that played many rounds of the dilemma. The objective was to study how cooperation emerges and survives in a world where individuals still act in their own interest.
+
+The strategies considered in this project include:
+
+- **Tit-for-Tat**: Starts by cooperating and then mirrors the opponent's previous move.
+- **Always Defect**: Betrays on every round.
+- **Always Cooperate**: Cooperates regardless of the opponent's action.
+- **Grudger**: Cooperates until betrayed, then defects forever.
+- **Random**: Acts without a fixed pattern.
+- **Forgiving Tit-for-Tat**: Like Tit-for-Tat, but sometimes forgives betrayal.
+- **Pavlov**: Repeats the previous move if the reward was high and changes it if the reward was low.
+- **Cooperate then Defect**: Cooperates on even rounds and defects on odd rounds.
+- **Win Stay Lose Shift**: Keeps the previous move after a good payoff and changes after a poor one.
+
+With enough computational support, the project ran a simulation of **1,000 rounds**. It was written using **Neovim**, **Python**, and object-oriented programming. The code remains available in my repository for anyone who wants to review or extend it.
+
+![Simulation output](${output})
+
+The ranking in this particular run looked roughly like this:
+
+1. Grudger
+2. Tit-for-Tat
+3. Always Defect
+4. Forgiving Tit-for-Tat
+5. Pavlov
+6. Win Stay Lose Shift
+7. Always Cooperate
+8. Cooperate then Defect
+9. Random
+
+That ranking should not be treated as final, because the simulation only tested a limited set of strategies. Even so, it offers a useful starting point for a broader interpretation, especially when combined with ideas from *The Evolution of Cooperation* by **Robert Axelrod** and **William Hamilton**.
+
+| Strategy | Psychology | Philosophy |
+| --- | --- | --- |
+| Tit-for-Tat | Encourages trust and reciprocity. | Reflects a balance between utilitarian ethics and Kantian morality. |
+| Always Defect | Explores selfishness and betrayal risk. | Represents the dilemma of Hobbesian rational egoism. |
+| Always Cooperate | Examines altruism and vulnerability. | Models social contract thinking or absolute morality. |
+| Grim Trigger | Studies emotional rigidity. | Raises the debate between punishment and forgiveness. |
+| Random | Reflects decision-making under uncertainty. | Connects with ideas of free will. |
+
+For Axelrod, the Prisoner's Dilemma is more than a theoretical puzzle; it is a practical tool for understanding the dynamics of cooperation and competition in human systems. Across repeated interactions, long-term success does not come from pure selfishness or pure altruism, but from a flexible balance between the two.
+
+The most successful strategies in this dilemma suggest that:
+
+- **Starting with cooperation** helps create trust and opens the door to mutual benefit.
+- **Responding with reciprocity** reinforces healthy relationships and discourages disloyal behavior.
+- **Being adaptable** is essential for dealing with change, mistakes, and misunderstandings.
+- **Forgiveness**, when used reasonably, helps repair relationships after conflict, while **firmness** prevents exploitation.
+
+These ideas go far beyond theory. They apply to everyday life, from personal relationships to politics, economics, and ecology. In a world where individual interests often collide with collective ones, the Prisoner's Dilemma reminds us how valuable it is to pursue cooperation without losing sight of our own goals.
+
+In the end, this problem teaches that there is no single rigid solution. Real success comes from learning, adapting, and evolving in response to the environment and the decisions of others. That is what makes this dilemma such a powerful model for understanding both human behavior and strategic systems.`
+		},
+		es: {
+			title: 'Implementando el Dilema del Prisionero en Python',
+			excerpt: 'Una simulación de teoría de juegos que explora por qué individuos racionales pueden no cooperar, incluso cuando la cooperación parece el mejor resultado para todos.',
+			body: `Publicado el _10 de Diciembre de 2024_
+
+El **Dilema del Prisionero** es un problema clásico en la teoría de juegos. Muestra cómo las decisiones individuales, tomadas en busca del interés propio, pueden llevar a resultados dañinos para todas las partes involucradas. Tiene implicaciones psicológicas, filosóficas y tecnológicas, por eso este proyecto mira el dilema desde múltiples ángulos.
+
+El dilema fue formulado originalmente por **Merrill Flood** y **Melvin Dresher** en la Corporación RAND durante la era de la Guerra Fría, y **Albert W. Tucker** luego le dio la forma narrativa estándar que aún se usa hoy.
+
+#### Configuración Narrativa
+
+Dos criminales son arrestados y colocados en celdas separadas, incapaces de comunicarse entre sí. Cada prisionero tiene dos opciones: **traicionar** al otro prisionero o **cooperar** manteniéndose en silencio. Dependiendo de la combinación de elecciones, ambos reciben diferentes sentencias.
+
+<table border="1">
+<tbody>
+  <tr>
+    <td>(2), (1)</td>
+    <td>Traición</td>
+    <td>Cooperación</td>
+  </tr>
+  <tr>
+    <td>Traición</td>
+    <td>Sentencia media para ambos</td>
+    <td>(1) sentencia larga, (2) sale libre</td>
+  </tr>
+  <tr>
+    <td>Cooperación</td>
+    <td>(2) sentenciado, (1) sale libre</td>
+    <td>Sentencia leve para ambos</td>
+  </tr>
+</tbody>
+</table>
+
+Para hacer el escenario más fácil de simular, el modelo de castigo puede convertirse en recompensas numéricas y extenderse a través de múltiples iteraciones.
+
+En la versión adaptada, un banquero con un cofre de monedas de oro invita a dos personas a jugar un juego. Aún no hay comunicación entre ellos, pero las opciones disponibles se convierten en **cooperar** y **no cooperar**. El ganador se determina por el número de monedas recibidas.
+
+<table border="1">
+<tbody>
+  <tr>
+    <td>(2), (1)</td>
+    <td>No cooperar</td>
+    <td>Cooperar</td>
+  </tr>
+  <tr>
+    <td>No cooperar</td>
+    <td>Una moneda para cada uno</td>
+    <td>El jugador que no coopera obtiene 5 monedas</td>
+  </tr>
+  <tr>
+    <td>Cooperar</td>
+    <td>El jugador que no coopera obtiene 5 monedas</td>
+    <td>3 monedas para cada uno</td>
+  </tr>
+</tbody>
+</table>
+
+En una versión de una sola ronda, la traición es trivialmente la mejor opción porque siempre proporciona una ganancia igual o mejor que la cooperación. Cuando ambos jugadores reconocen que la traición domina y actúan en consecuencia, la situación alcanza lo que se conoce como un **equilibrio de Nash**, ya que no hay incentivo para cambiar de estrategia unilateralmente.
+
+Sin embargo, la vida real rara vez funciona como un juego de una sola vez. Las relaciones, los lugares de trabajo, los mercados, la política e incluso los ecosistemas a menudo implican interacciones repetidas. En esos contextos, la pregunta clave se convierte en: **¿qué estrategia funciona mejor con el tiempo?**
+
+Robert Axelrod organizó un torneo internacional en la década de 1980 para estudiar estrategias de juegos repetidos. Los participantes enviaron algoritmos que jugaron muchas rondas del dilema. El objetivo era estudiar cómo emerge y sobrevive la cooperación en un mundo donde los individuos aún actúan en su propio interés.
+
+Las estrategias consideradas en este proyecto incluyen:
+
+- **Tit-for-Tat**: Comienza cooperando y luego refleja el movimiento anterior del oponente.
+- **Siempre Traicionar**: Traiciona en cada ronda.
+- **Siempre Cooperar**: Coopera sin importar la acción del oponente.
+- **Resentido**: Coopera hasta ser traicionado, luego traiciona para siempre.
+- **Aleatorio**: Actúa sin un patrón fijo.
+- **Tit-for-Tat Perdonador**: Como Tit-for-Tat, pero a veces perdona la traición.
+- **Pavlov**: Repite el movimiento anterior si la recompensa fue alta y lo cambia si fue baja.
+- **Cooperar luego Traicionar**: Coopera en rondas pares y traiciona en impares.
+- **Gana Quédate Pierde Cambia**: Mantiene el movimiento anterior después de una buena ganancia y lo cambia después de una pobre.
+
+Con suficiente soporte computacional, el proyecto ejecutó una simulación de **1,000 rondas**. Fue escrito usando **Neovim**, **Python** y programación orientada a objetos. El código permanece disponible en mi repositorio para cualquiera que quiera revisarlo o extenderlo.
+
+![Salida de la simulación](${output})
+
+La clasificación en esta ejecución particular se veía aproximadamente así:
+
+1. Resentido
+2. Tit-for-Tat
+3. Siempre Traicionar
+4. Tit-for-Tat Perdonador
+5. Pavlov
+6. Gana Quédate Pierde Cambia
+7. Siempre Cooperar
+8. Cooperar luego Traicionar
+9. Aleatorio
+
+Esa clasificación no debe tratarse como definitiva, porque la simulación solo probó un conjunto limitado de estrategias. Aun así, ofrece un punto de partida útil para una interpretación más amplia, especialmente cuando se combina con ideas de *La Evolución de la Cooperación* de **Robert Axelrod** y **William Hamilton**.
+
+| Estrategia | Psicología | Filosofía |
+| --- | --- | --- |
+| Tit-for-Tat | Fomenta la confianza y la reciprocidad. | Refleja un balance entre la ética utilitaria y la moral kantiana. |
+| Siempre Traicionar | Explora el egoísmo y el riesgo de traición. | Representa el dilema del egoísmo racional hobbesiano. |
+| Siempre Cooperar | Examina el altruismo y la vulnerabilidad. | Modela el pensamiento del contrato social o la moral absoluta. |
+| Gatillo Siniestro | Estudia la rigidez emocional. | Plantea el debate entre castigo y perdón. |
+| Aleatorio | Refleja la toma de decisiones bajo incertidumbre. | Conecta con ideas de libre albedrío. |
+
+Para Axelrod, el Dilema del Prisionero es más que un rompecabezas teórico; es una herramienta práctica para entender las dinámicas de cooperación y competencia en sistemas humanos. A través de interacciones repetidas, el éxito a largo plazo no viene del egoísmo puro ni del altruismo puro, sino de un balance flexible entre los dos.
+
+Las estrategias más exitosas en este dilema sugieren que:
+
+- **Comenzar con cooperación** ayuda a crear confianza y abre la puerta al beneficio mutuo.
+- **Responder con reciprocidad** refuerza las relaciones saludables y desincentiva el comportamiento desleal.
+- **Ser adaptable** es esencial para dealing with change, mistakes, and misunderstandings.
+- **El perdón**, cuando se usa razonablemente, ayuda a reparar relaciones después del conflicto, mientras que la **firmeza** previene la explotación.
+
+Estas ideas van mucho más allá de la teoría. Se aplican a la vida cotidiana, desde relaciones personales hasta política, economía y ecología. En un mundo donde los intereses individuales a menudo chocan con los colectivos, el Dilema del Prisionero nos recuerda cuán valioso es buscar la cooperación sin perder de vista nuestros propios objetivos.
+
+Al final, este problema enseña que no hay una única solución rígida. El éxito real viene de aprender, adaptarse y evolucionar en respuesta al ambiente y las decisiones de los demás. Eso es lo que hace que este dilema sea un modelo tan poderoso para entender tanto el comportamiento humano como los sistemas estratégicos.`
+		}
+	};
+
+	$: currentContent = content[$language];
+</script>
+
+<svelte:head>
+	<title>Prisoner's Dilemma - Caffeine Overflow</title>
+	<meta
+		name="description"
+		content="A Python implementation and analysis of the Prisoner's Dilemma, combining game theory, simulation, and strategy comparison."
+	/>
+</svelte:head>
+
+<div class="mx-auto max-w-4xl space-y-10 px-4 py-12">
+	<header class="space-y-4 text-center">
+		<p class="inline-flex items-center gap-2 font-semibold uppercase tracking-wide text-teal-600">
+			<Fa icon={faUsers} class="mb-2 text-4xl text-teal-600" />
+			Prisoner's Dilemma
+		</p>
+		<h1 class="text-4xl font-bold text-gray-900">{currentContent.title}</h1>
+		<p class="text-lg text-gray-600">
+			{currentContent.excerpt}
+		</p>
+	</header>
+
+	<MarkdownRenderer content={currentContent.body} />
+</div>

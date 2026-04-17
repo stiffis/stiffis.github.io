@@ -1,0 +1,48 @@
+{
+	"nav": {
+		"blog": "Blog",
+		"coolStuff": "Cool Stuff",
+		"contact": "Contacto"
+	},
+	"home": {
+		"welcome": "Bienvenido a mi jardín digital",
+		"subtitle": "Halloooo, este es mi espacio personal, donde escribiré sobre algunas experiencias, tanto personales como académicas.",
+		"readBlog": "Leer Blog",
+		"contact": "Contacto"
+	},
+	"blog": {
+		"title": "Blog",
+		"searchPlaceholder": "Buscar entradas...",
+		"allTags": "Todas las etiquetas",
+		"noResults": "No hay entradas que coincidan con tu búsqueda y filtros."
+	},
+	"coolStuff": {
+		"title": "Cool Stuff",
+		"subtitle": "Proyectos, herramientas y cosas interesantes que quiero compartir",
+		"sections": {
+			"university": "UNIVERSIDAD",
+			"configs": "CONFIGS",
+			"projects": "PROYECTOS",
+			"research": "INVESTIGACIÓN"
+		}
+	},
+	"contact": {
+		"title": "Contacto",
+		"subtitle": "¡Me encantaría saber de ti!",
+		"infoTitle": "Información de Contacto",
+		"email": "Correo electrónico",
+		"location": "Ubicación",
+		"followMe": "Sígueme en"
+	},
+	"toc": {
+		"title": "Contenido"
+	},
+	"theme": {
+		"toggle": "Cambiar tema"
+	},
+	"language": {
+		"select": "Seleccionar idioma",
+		"en": "English",
+		"es": "Español"
+	}
+}
