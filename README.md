@@ -73,6 +73,17 @@ Componente `src/lib/components/StatusBar.svelte` (fija al fondo):
   - GitHub Pages (usuario/organización o proyecto en raíz), Netlify, Vercel (modo estático) u otro hosting estático.
 - Si publicas bajo subruta, configura `paths.base` en `svelte.config.js` según tu dominio.
 
+## Deploy en GitHub Pages
+
+- Este repo ya tiene workflow en `.github/workflows/deployment.yml`.
+- Como el repositorio se llama `stiffis.github.io`, GitHub lo publica como sitio de usuario en la raíz:
+  `https://stiffis.github.io/`
+- El deploy se dispara automáticamente con cada push a `main`.
+- También puedes lanzarlo manualmente desde la pestaña `Actions` porque el workflow incluye `workflow_dispatch`.
+- En GitHub ve a `Settings > Pages` y en `Source` selecciona `GitHub Actions`.
+- El build genera la salida estática en `build/`, que es la carpeta que sube el workflow.
+- Si en el futuro cambias el nombre del repo y deja de ser `stiffis.github.io`, tendrás que definir `paths.base` en SvelteKit para publicar bajo una subruta.
+
 ---
 
 Author: stiffis · License: MIT (ver `package.json`).
