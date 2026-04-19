@@ -23,7 +23,7 @@
 				en: 'An essay on losses, subscriptions, API economics, data centers, and the economic and social impact of the AI infrastructure race.',
 				es: 'Un ensayo sobre pérdidas, suscripciones, economía de API, centros de datos y el impacto económico y social de la carrera por infraestructura de IA.'
 			},
-			date: '2026-04-17',
+			date: '2026-04-19',
 			slug: 'la-economia-incomoda-de-la-ia',
 			path: '/blog/la-economia-incomoda-de-la-ia',
 			hashtags: ['#economics', '#ai', '#openai', '#anthropic', '#datacenters']
