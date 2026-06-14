@@ -59,17 +59,17 @@ Gödel essentially forced the system to talk about itself — like how Russell's
 
 ## What This Means
 
-It is not that mathematicians are bad at their jobs. It is not that techniques are missing. It is a *structural* limitation. Like Turing's incompleteness theorem (1936): there are problems no machine can solve. Gödel proved the analogous thing for proof systems: there are truths no formal system can reach.
+It is not that mathematicians are bad at their jobs. It is not that techniques are missing. It is a *structural* limitation. Like Turing's undecidability result (1936): there are problems no machine can solve. Gödel proved the analogous thing for proof systems: there are truths no formal system can reach.
 
 This extends beyond mathematics:
 
 - **Philosophy of language**: can an axiomatic system capture meaning, or does something always escape?
 - **Artificial intelligence**: can a machine reason about all truths? Gödel says no.
-- **Your NNC post**: do neural networks "discover" patterns we cannot formalize? Gödel does not forbid it — in fact, he suggests it.
+- **Neural networks** (see my post [The Inspiration of Neural Networks from the Brain](/blog/inspiration-neural-networks-and-the-brain)): do they "discover" patterns we cannot formalize? Gödel does not forbid it — in fact, he suggests it.
 
 ## The Personal Toll
 
-Logicomix shows this well: Russell, Gödel, Cantor — all ended up relatively alone or broken. Cantor ended up in a sanatorium, writing letters to God. Gödel died of starvation because he was convinced he was being poisoned.
+Logicomix shows this well: Russell, Gödel, Cantor — all ended up relatively alone or broken. Cantor ended up in a sanatorium, writing letters to God. Gödel died of starvation: convinced he was being poisoned, he would only eat food prepared by his wife Adele — and when she was hospitalized for six months, he simply stopped eating.
 
 Is there something in the search for absolute certainty that consumes those who pursue it?
 
@@ -142,17 +142,17 @@ Gödel básicamente forzó al sistema a hablar de sí mismo — como cuando la p
 
 ## Qué Significa Esto
 
-No es que los matemáticos sean malos en su trabajo. No es que falten técnicas. Es una limitación *estructural*. Como el teorema de incompletitud de Turing (1936): hay problemas que ninguna máquina puede resolver. Gödel probó lo análogo para sistemas de prueba: hay verdades que ningún sistema formal puede alcanzar.
+No es que los matemáticos sean malos en su trabajo. No es que falten técnicas. Es una limitación *estructural*. Como el resultado de indecidibilidad de Turing (1936): hay problemas que ninguna máquina puede resolver. Gödel probó lo análogo para sistemas de prueba: hay verdades que ningún sistema formal puede alcanzar.
 
 Esto se extiende más allá de la matemática:
 
 - **Filosofía del lenguaje**: ¿puede un sistema axiomático capturar el significado, o siempre se escapa algo?
 - **Inteligencia artificial**: ¿puede una máquina razonar sobre todas las verdades? Gödel dice que no.
-- **Tu post de NNC**: ¿las redes neuronales "descubren" patrones que nosotros no podemos formalizar? Gödel no lo prohíbe — de hecho, lo sugiere.
+- **Redes neuronales** (mira mi post [La Inspiración de las Redes Neuronales a Partir del Cerebro](/blog/inspiration-neural-networks-and-the-brain)): ¿"descubren" patrones que nosotros no podemos formalizar? Gödel no lo prohíbe — de hecho, lo sugiere.
 
 ## El Precio Personal
 
-Logicomix muestra esto bien: Russell, Gödel, Cantor — todos terminaron relativamente solos o rotos. Cantor terminó en un sanatorio, escribiendo cartas a Dios. Gödel murió de inanición porque estaba convencido de que lo estaban envenenando.
+Logicomix muestra esto bien: Russell, Gödel, Cantor — todos terminaron relativamente solos o rotos. Cantor terminó en un sanatorio, escribiendo cartas a Dios. Gödel murió de inanición: convencido de que lo envenenaban, solo comía lo que le preparaba su esposa Adele — y cuando ella fue hospitalizada durante seis meses, él simplemente dejó de comer.
 
 ¿Hay algo en la búsqueda de certeza absoluta que consume a quienes la persiguen?
 
